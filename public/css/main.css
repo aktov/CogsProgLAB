@@ -7,10 +7,15 @@ div {
 	text-align: center;
 }
 
+
+label {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
 .container {
 	vertical-align: center;
 	text-align: center;
-	font-family: "Lucida Console";
+	font-family: "Lucida Console"
 }
 
 
