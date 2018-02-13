@@ -9,8 +9,14 @@ div {
 
 .container {
 	vertical-align: center;
+	text-align: center;
+	font-family: "Lucida Console";
 }
 
+
+.header {
+	font-family: "Lucida Console";
+}
 
 
 .label {
