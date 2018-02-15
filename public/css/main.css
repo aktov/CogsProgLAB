@@ -9,18 +9,24 @@ div {
 
 
 label {
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: "Palatino";
+	font-size: 100%;
+	vertical-align: left;
 }
 
 .container {
 	vertical-align: center;
 	text-align: center;
-	font-family: "Lucida Console"
+
+	/*margin-left: 1px;
+	background-color: #ab1234;
+	padding: 1px;
+	width: 1px; */
 }
 
 
 .header {
-	font-family: "Lucida Console";
+	font-family: "Palatino";
 }
 
 
@@ -34,7 +40,7 @@ label {
 }
 
 .backButton{
-	float: left;
+	float: right;
 }
 
 .foodPicture{

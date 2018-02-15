@@ -13,6 +13,7 @@ var recipeSearch = require('./routes/recipeSearch');
 var recipeTemplate = require('./routes/recipeTemplate');
 var help = require('./routes/help');
 var stats = require('./routes/stats');
+var questions = require('./routes/questions');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,6 +44,7 @@ app.get('/recipeSearch', recipeSearch.view);
 app.get('/recipeTemplate', recipeTemplate.view);
 app.get('/help', help.view);
 app.get('/stats', stats.view);
+app.get('/questions', questions.view);
 // Example route
 // app.get('/users', user.list);
 
