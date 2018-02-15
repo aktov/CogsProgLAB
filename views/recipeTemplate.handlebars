@@ -5,10 +5,12 @@
 	<title>LAByrinth</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
 	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	<script src="scripts.js"></script>
+
 	
 </head>
 <body>
@@ -67,9 +69,13 @@
 	<div class="navButton">
 	<button>Save to Favorites</button>
 	<br />
-	<input type="checkbox" id="completed">
-	<label for="completed">Completed</label>
+	<label><input id="completed" type="checkbox" onclick="dishcount()"></input> Completed </label>
 	</div>
+
+<script>
+	var test = 1;
+</script>
+
 
 	
 </body>
