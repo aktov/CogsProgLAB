@@ -6,40 +6,95 @@
 	<link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 
+
 <html>
 
 <h1> Questionaire </h1>
 
-<h3> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer.</h3>
+<h3> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer. If your answer is not one of the drop down options, type your answer and let us know so we can add it! (For now we will only have one answer per question.) </h3>
 
 <div class="container-fluid">
 	<div class="container">
 		<h3> Question 1) </h3>
-		<p> What type of food do you like?</p>
-		<input type="text" placeholder="ex.Asian">
+		<p> What is your favorite type of food?</p>
+		<input list="likefoodtypes" placeholder="Ex.Asian">
+			<datalist id="likefoodtypes">
+				<option value="Chinese">
+				<option value="American">
+				<option value="Asian">
+				<option value="French">
+				<option value="Greek">
+				<option value="Indian">
+				<option value="Italian">
+				<option value="Japanese">
+				<option value="Mexican">
+				<option value="Thai">
+				<option value="Vietnamese">
+				<option value="Spicy dishes">
+				<option value="Meat dishes">
+				<option value="Vegetable dishes">
+				<option value="Rice dishes">
+				<option value="Egg dishes">
+				<option value="None"
+			</datalist>
+		</input>
 	</div>
 
 	<div class="container">
 		<h3> Question 2) </h3>
-		<p> What type of food do you dislike?</p>
-		<input type="text" placeholder="ex.spicy food">
+		<p> What type of food do you dislike the most?</p>
+		<input  list="likefoodtypes" placeholder="Ex.Asian">	
+		</input>
 	</div>
 
 	<div class="container">
 		<h3> Question 3) </h3>
 		<p> Any dietary restrictions?</p>
-		<input type="text" placeholder="ex.vegetarian">
+		<input  list="dietaryrestriction" placeholder="ex.Vegan">
+			<datalist id="dietaryrestriction">
+				<option value="Ovo-Vegetarian">
+				<option value="Lacto-Vegetarian">
+				<option value="Lacto-Ovo Vegetairan">
+				<option value="Vegan">
+				<option value="Pescetarian">
+				<option value="Hinduism">
+				<option value="Judaism">
+				<option value="Islam">
+				<option value="Gluten intolerance">
+			</datalist>
+
 	</div>
 
 	<div class="container">
 		<h3> Question 4) </h3>
 		<p> Anything you're allergic to?</p>
-		<input type="text" placeholder="ex.peanuts">
+		<input list="allergies" placeholder="ex.Peanuts">
+			<datalist id="allergies">
+				<option value="Peanuts">
+				<option value="Milk">
+				<option value="Egg">
+				<option value="Wheat">
+				<option value="Soy">
+				<option value="Fish">
+				<option value="Shellfish">
+				<option value="Nuts">
+			</datalist>
+	</div>
+
+	<div class="container">
+		<h3> Question 5) </h3>
+		<p> What do you believe is your own cooking skill?</p>
+		<input list="skill" placeholder="Beginner">
+			<datalist id="skill">
+				<option value="Beginner">
+				<option value="Intermediate">
+				<option value="Advanced">
+			</datalist>
 	</div>
 </div>
 
 <div>
-	<h4> Create new login </h4>
+	<h4> Create new login (or enter old login) </h4>
 	<input type="text" placeholder="username" required>
 	<input type="text" placeholder="password" required>
 	<a href="recipeSearch.html">
