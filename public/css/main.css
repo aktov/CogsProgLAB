@@ -1,6 +1,10 @@
 .navBar {
 		float: center;
-		background-color: #bde4ed;
+		background-color: #A3E4D7;
+}
+
+.current{
+	background-color: #E5E8E8;
 }
 
 div {
