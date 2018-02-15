@@ -27,93 +27,23 @@
 	</div>
 	<br />
 	
-	<table class="recipeList" align="center">
-		<tr>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>EASY</b>
-				<br />
-				<label>Servings: </label><b>10</b>
-			</td>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>MEDIUM</b>
-				<br />
-				<label>Servings: </label><b>12</b>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>EASY</b>
-				<br />
-				<label>Servings: </label><b>10</b>
-			</td>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>EASY</b>
-				<br />
-				<label>Servings: </label><b>8</b>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>HARD</b>
-				<br />
-				<label>Servings: </label><b>10</b>
-			</td>
-			<td>
-				<div>
-					<a href="recipeTemplate">
-					<img src="../images/chefHat.jpg" float="center" height="25%" width="25%"/>
-					</a>
-				</div>
-				<br />
-				<i>Name of Recipe</i>
-				<br />
-				<label>Difficulty: </label><b>MEDIUM</b>
-				<br />
-				<label>Servings: </label><b>6</b>
-			</td>
-		</tr>
-	</table>
-	
+	{{#each recipes}}
+      <div class="recipes" id="{{name}}">
+        <a href="#" class="thumbnail">
+          <img class="img-responzive" src="{{imageURL}}" />
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <label>{{servings}}</label>
+          <label>{{cookTime}}</label>
+        </a>
+      </div>
+      <hr />
+    {{/each}}
 
+
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/recipes.js"></script>
+	
 </body>
 </html>

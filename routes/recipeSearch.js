@@ -3,6 +3,9 @@
  * GET home page.
  */
 
+ var data = require('../recipes.json');
+
 exports.view = function(req, res){
-  res.render('recipeSearch');
+	console.log(data);
+  res.render('recipeSearch', data);
 };
