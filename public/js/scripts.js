@@ -12,5 +12,5 @@ function dishcount(checkboxElem){
 }
 
 function dishalert(){
-	alert("You've made"+ count + "dishes!");
+	alert("You've made "+ count + " dishes!");
 }

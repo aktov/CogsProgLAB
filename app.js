@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var recipeSearch = require('./routes/recipeSearch');
 var recipeTemplate = require('./routes/recipeTemplate');
-var help = require('./routes/help');
+var options = require('./routes/options');
 var stats = require('./routes/stats');
 var questions = require('./routes/questions');
 // Example route
@@ -42,7 +42,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/recipeSearch', recipeSearch.view);
 app.get('/recipeTemplate', recipeTemplate.view);
-app.get('/help', help.view);
+app.get('/options', options.view);
 app.get('/stats', stats.view);
 app.get('/questions', questions.view);
 // Example route
