@@ -23,10 +23,17 @@
 
 	<br />
 	<h1 align="center"> Profile </h1>
+
+	<p class="facebookLogin" align="center">
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button>
+	</p>
 	
 	<div align="center" >
-		<img src="images/profile.png" alt="ProfilePic">
-		<h2> Lillian Lee </h2>
+		<div  id="facebookPhoto" class="profile">
+			<img id="photo" src="images/profile.png" alt="ProfilePic">
+		</div>
+		<h2 id="name"> Name </h2>
 		<h3 style="margin-top: 30px"><u> Stats</u> </h3>
 
 		<div>
@@ -79,8 +86,11 @@
 
 	</div>
 	
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/dishcount.js"></script>
 	<script src="js/slideshow.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 
 	<script>
 	window.onload=function(){
