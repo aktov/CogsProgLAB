@@ -1,8 +1,4 @@
-.navBar {
-		float: center;
-		background-color: #A3E4D7;
 
-}
 
 div {
 	text-align: center;
@@ -131,55 +127,28 @@ meter{
 	width:350px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
 }
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #666;
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
 }
 
-
-li a:hover:not(.active) {
-    background-color: #ddd;
+div.scrollmenu a:hover {
+    background-color: #777;
 }
 
-li a.active {
-    color: white;
-    background-color: #2ea095;
+.active{
+  background-color: #2ea095;
 }
 
-button {
-  background-color: #f3f3f3;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px 16px;
-
-  /* float: center; */
-}
-
-button:hover {
-  background-color: #ddd;
-}
-
-div.scrollmenu {
-  overflow: auto;
-  white-space: nowrap;
 
 #photo {
   padding: 0;

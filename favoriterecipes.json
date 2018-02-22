@@ -1,0 +1,28 @@
+{
+	"favoriterecipes": [
+		{
+			"name": "Roasted Pumpkin, Sweet Potato, and Brown Rice Pilaf",
+			"recipeURL": "https://www.beachbodyondemand.com/blog/roasted-pumpkin-sweet-potato-brown-rice-pilaf",
+			"description": "A side dish hearty enough to be your entree",
+			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Pumpkin-Pilaf-700x350_d5hitz-394x197.jpg",
+			"servings": "8 Servings",
+			"cookTime": "Total Time: 1 hour and 45 minutes"				
+		},
+		{
+			"name": "Slow Cooker Chicken Enchiladas",
+			"recipeURL": "https://www.beachbodyondemand.com/blog/slow-cooker-chicken-enchiladas-recipe",
+			"description": "Top with a runny egg for even more awesomeness",
+			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-in-post.jpg",
+			"servings": "10 Servings",
+			"cookTime": "Total Time: 3 hours and 30 minutes"				
+		},
+		{
+			"name": "Garlic Shrimp with Zucchini Noodles",
+			"recipeURL": "https://www.beachbodyondemand.com/blog/garlic-basil-shrimp-with-zucchini-noodles",
+			"description": "Oodles of Zoodles for all your carb-free needs",
+			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Garlic-Basil-Shrimp-with-Zucchini-Noodles-394x197.jpg",
+			"servings": "4 Servings",
+			"cookTime": "Total Time: 20 minutes"	
+		},
+	]
+}

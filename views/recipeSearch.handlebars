@@ -13,26 +13,25 @@
 	
 </head>
 <body>
-	<div class="scrollmenu">
-		<ul>
-			<li><a href='stats'>Stats</a></li>
-			<li><a class="active" href='recipeSearch'>Recipes</a></li>
-			<li><a href='options'>Options</a></li>
-			<li><a href='favorites'>Favorites</a></li>
-			<li><a href='recent'>Recent</a></li>
-		</ul>
+	<div id="navbar" class="scrollmenu">
+		<a href='stats'>Stats</a>
+		<a class="active" href='recipeSearch'>Recipes</a>
+		<a href='favorites'>Favorites</a>
+		<a href='recent'>Recent</a>
+		<a href='options'>Options</a>
+		<a href=#> Achievements </a>
 	</div>
-	<br />
-	<!-- <div class="container">
+
+	<h1 align="center"> Recipes </h1>
+
+	 <div class="container">
 		<label><b>Search for recipes</b></label>
 		<input type="text" placeholder="enter recipe here">
 		<button type="submit">Search!</button>
-	</div> -->
-	<br />
+	</div> 
+	<br>
 
-	<div style="margin-bottom: 35px">
-		<a href=""><button id=recent> Recently Viewed </button></a>
-	</div>
+	
 	
 	{{#each recipes}}
       <div class="recipes" id="{{name}}" >
@@ -48,13 +47,10 @@
       <hr />
     {{/each}}
 
-<script>
 
-</script>
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/recipes.js"></script>
 
 	
 </body>

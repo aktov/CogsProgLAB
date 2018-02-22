@@ -5,93 +5,44 @@
 	<title>LAByrinth</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
 	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 </head>
 <body>
-	<div class="scrollmenu">
-		<ul>
-			<li><a href='stats'> Stats </a></li>
-			<li><a href='recipeSearch'>Recipes</a></li>
-			<li><a href='options'>Options</a></li>
-			<li><a class="active" href='favorites'>Favorites</a></li>
-			<li><a href='recent'>Recent</a></li>
-		</ul>
+	<div id="navbar" class="scrollmenu">
+		<a href='stats'>Stats</a>
+		<a href='recipeSearch'>Recipes</a>
+		<a class="active" href='favorites'>Favorites</a>
+		<a href='recent'>Recent</a>
+		<a href='options'>Options</a>
+		<a href=#> Achievements </a>
 	</div>
 
+	<h1 align="center"> Favorites </h1>
 
-	<br />
-	<h1 align="center"> Profile </h1>
-	
-	<div align="center" >
-		<img src="images/profile.png" alt="ProfilePic">
-		<h2> Lillian Lee </h2>
-		<h3 style="margin-top: 30px"><u> Stats</u> </h3>
-
-		<div>
-			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
-			<meter id="expbar" value = "2" min="0" max="10"> 4 out of 10 </meter>
-		</div>
-
-		<p align="left" style="margin-left:40px"> Keep on cooking! </p>
-
-		<p> Total dishes cooked: <p id="output"></p></p>
-		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
-		<p> Current Level : Beginner </p>
-
-	<div  style="margin-top: 40px" class="slideshow-container container-fluid">
-
-		  <!-- Full-width images with number and caption text -->
-		  <div class="mySlides">
-		    <img src="images/Dishes.png" style="width:100%">
-		    Febuary is almost over! <br>Get some cooking in before its too late! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Servings.png" style="width:100%">
-		    Febuary is almost over! <br>Get some cooking in before its too late! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Types.png" style="width:100%">
-		    You've made a lot of Asian dishes recently. We'll recommend you some more tasty asian dishes! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Money.png" style="width:100%">
-		    With the amount of money you've saved, you could buy a high power gaming computer! 
-		  </div>
-
-	</div>
-	<br>
-
-	<!-- The dots/circles -->
-	<div style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span> 
-	  <span class="dot" onclick="currentSlide(2)"></span> 
-	  <span class="dot" onclick="currentSlide(3)"></span> 
-	  <span class="dot" onclick="currentSlide(4)"></span>
-	</div>
-		
-	<p> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
+	{{#each favoriterecipes}}
+      <div class="favoriterecipes">
+        <a class="thumbnail" href="{{recipeURL}}">
+          <img class="img-responzive" src="{{imageURL}}" />
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <label>{{servings}}</label>
+          <br>
+          <label>{{cookTime}}</label>
+        </a>
+      </div>
+      <hr />
+    {{/each}}
 
 
-	</div>
-	
-	<script src="js/dishcount.js"></script>
-	<script src="js/slideshow.js"></script>
 
-	<script>
-	window.onload=function(){
-		document.getElementById('output').innerHTML= localStorage.getItem("count");
-		document.getElementById('toNextLevel').innerHTML= localStorage.getItem("toLevel");
-		var meter = document.getElementById('expbar');
-  		var exp = Number(localStorage.getItem("count"));
- 		meter.value = exp;
-	}
-	</script>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+
 </body>
 </html>
