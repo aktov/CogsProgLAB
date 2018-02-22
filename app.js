@@ -8,14 +8,16 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+// Example route
+// var user = require('./routes/user');
 var index = require('./routes/index');
 var recipeSearch = require('./routes/recipeSearch');
 var recipeTemplate = require('./routes/recipeTemplate');
 var options = require('./routes/options');
 var stats = require('./routes/stats');
 var questions = require('./routes/questions');
-// Example route
-// var user = require('./routes/user');
+var favorites = require('./routes/favorites');
+var recent = require('./routes/recent');
 
 var app = express();
 
@@ -39,14 +41,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Example route
+// app.get('/users', user.list);
 app.get('/', index.view);
 app.get('/recipeSearch', recipeSearch.view);
 app.get('/recipeTemplate', recipeTemplate.view);
 app.get('/options', options.view);
 app.get('/stats', stats.view);
 app.get('/questions', questions.view);
-// Example route
-// app.get('/users', user.list);
+app.get('/favorites', favorites.view);
+app.get('/recent', recent.view);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
