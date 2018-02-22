@@ -10,7 +10,7 @@ div {
 
 
 label {
-	font-family: "Palatino";
+	/*font-family: ""; */
 	font-size: 100%;
 	vertical-align: left;
 }
@@ -18,16 +18,11 @@ label {
 .container {
 	vertical-align: center;
 	text-align: center;
-
-	/*margin-left: 1px;
-	background-color: #ab1234;
-	padding: 1px;
-	width: 1px; */
 }
 
 
 .header {
-	font-family: "Palatino";
+  font-family: courier;
 }
 
 
@@ -59,7 +54,7 @@ label {
 	padding: 20px 20px;
 	/*width: 25%; */
 
-	font-family: bookman;
+	/*font-family: bookman;*/
 }
 
 .recipeSummary{
@@ -157,6 +152,7 @@ li a {
     text-decoration: none;
 }
 
+
 li a:hover:not(.active) {
     background-color: #ddd;
 }
@@ -164,4 +160,25 @@ li a:hover:not(.active) {
 li a.active {
     color: white;
     background-color: #2ea095;
+}
+
+
+button {
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 16px;
+
+  /* float: center; */
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
 }
