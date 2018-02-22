@@ -12,43 +12,45 @@
 	
 </head>
 <body>
-
-	<div class="navBar container-fluid">
-		<div class="row">
-			<div class="col-xs-4 current">
-				<b><a href="stats"><img src="../images/person.png" height="10%" width="10%" alt="Profile" /></a></b>
-			</div>
-			<div class="col-xs-4 noncurrent">
-				<b><a href="recipeSearch"><img src="../images/cookbook.png" height="8%" width="8%" alt="Recipes" /></a></b>
-			</div>
-			<div class="col-xs-4 noncurrent">
-				<b><a href="options"><img src="../images/cog.png" height="10%" width="10%" alt="Options" /></a></b>
-			</div>
-		</div>
+	<div>
+		<ul>
+			<li><a class="active" href='stats'> Stats </a></li>
+			<li><a href='recipeSearch'>Recipes</a></li>
+			<li><a href='options'>Options</a></li>
+		</ul>
 	</div>
+
+
 	<br />
 	<h1 align="center"> Profile </h1>
 	
-	<div align="center">
+	<div align="center" >
 		<img src="images/profile.png" alt="ProfilePic">
 		<h2> Lillian Lee </h2>
-		<h3 style="margin-top: 30px"> Stats </h3>
-		<p> Dishes cooked this month: <p id="output"></p></p>
-		<p> Level : Beginner </p>
-		<p> Favorite Food : Asian </p>
-		<P> Disliked Food : Vegetable dishes </P>
+		<h3 style="margin-top: 30px"><u> Stats</u> </h3>
+
+		<div>
+			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
+			<meter id="expbar" value = "2" min="0" max="10"> 4 out of 10 </meter>
+		</div>
+
+		<p align="left" style="margin-left:40px"> Keep on cooking! </p>
+
+		<p> Total dishes cooked: <p id="output"></p></p>
+		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
+		<p> Current Level : Beginner </p>
 
 	<div  style="margin-top: 40px" class="slideshow-container container-fluid">
 
 		  <!-- Full-width images with number and caption text -->
 		  <div class="mySlides">
 		    <img src="images/Dishes.png" style="width:100%">
-		    Febuary is almost over! Get some cooking in before its too late! 
+		    Febuary is almost over! <br>Get some cooking in before its too late! 
 		  </div>
 
 		  <div class="mySlides">
 		    <img src="images/Servings.png" style="width:100%">
-		    Febuary is almost over! Get some cooking in before its too late! 
+		    Febuary is almost over! <br>Get some cooking in before its too late! 
 		  </div>
 
 		  <div class="mySlides">
@@ -58,7 +60,7 @@
 
 		  <div class="mySlides">
 		    <img src="images/Money.png" style="width:100%">
-		    With the amount of money you've saved, you could buy a high powered gaming computer! 
+		    With the amount of money you've saved, you could buy a high power gaming computer! 
 		  </div>
 
 	</div>
@@ -72,17 +74,22 @@
 	  <span class="dot" onclick="currentSlide(4)"></span>
 	</div>
 		
-	<p> <h4> Tip! </h4> You didn't cook too much this month. Maybe eat out less to save some money? </p>
+	<p> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
 
 
 	</div>
 	
-	<script src="js/scripts.js"></script>
+	<script src="js/dishcount.js"></script>
+	<script src="js/slideshow.js"></script>
 
 	<script>
-		window.onload=function(){
-	document.getElementById('output').innerHTML= localStorage.getItem("count");
-		}
+	window.onload=function(){
+		document.getElementById('output').innerHTML= localStorage.getItem("count");
+		document.getElementById('toNextLevel').innerHTML= localStorage.getItem("toLevel");
+		var meter = document.getElementById('expbar');
+  		var exp = Number(localStorage.getItem("count"));
+ 		meter.value = exp;
+	}
 	</script>
 </body>
 </html>

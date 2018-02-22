@@ -1,26 +1,3 @@
-
-
-function dishcount(checkboxElem){
-	var count = Number(localStorage.getItem("count")) || {};
-	if(checkboxElem.checked){
-		count++;
-	}
-	else{
-		count--;
-	}
-	localStorage.setItem("count",JSON.stringify(count));
-	console.log(localStorage.getItem("count"));
-}
-
-window.onload=function(){
-	document.getElementById('output').innerHTML= localStorage.getItem("count");
-}
-
-
-function dishalert(){
-	alert("You've made "+ localStorage.getItem("count") + " dishes!");
-}
-
 /*Slideshow*/
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -50,3 +27,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
