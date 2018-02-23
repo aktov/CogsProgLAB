@@ -18,7 +18,7 @@
 		},
 		{
 			"name": "Roasted Chicken and Butternut Squash Soup",
-			"recipeURL": "https://www.beachbodyondemand.com/blog/roasted-chicken-butternut-squash-soup",
+			"recipeURL": "/recipePages/butternut",
 			"description": "A sweet and savory chicken soup",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Roasted-Chicken-and-Butternut-Squash-Soup_kuhic1-394x197.jpg",
 			"servings": "8 Servings",
@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "Slow Cooker Chicken Enchiladas",
-			"recipeURL": "https://www.beachbodyondemand.com/blog/slow-cooker-chicken-enchiladas-recipe",
+			"recipeURL": "/recipePages/enchiladas",
 			"description": "Top with a runny egg for even more awesomeness",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-in-post.jpg",
 			"servings": "10 Servings",
@@ -34,7 +34,7 @@
 		},
 		{
 			"name": "Garlic Shrimp with Zucchini Noodles",
-			"recipeURL": "https://www.beachbodyondemand.com/blog/garlic-basil-shrimp-with-zucchini-noodles",
+			"recipeURL": "/recipePages/basilShrimp",
 			"description": "Oodles of Zoodles for all your carb-free needs",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Garlic-Basil-Shrimp-with-Zucchini-Noodles-394x197.jpg",
 			"servings": "4 Servings",
@@ -42,7 +42,7 @@
 		},
 		{
 			"name": "Curried Chicken with Couscous",
-			"recipeURL": "https://www.beachbodyondemand.com/blog/curried-chicken-couscous",
+			"recipeURL": "/recipePages/couscous",
 			"description": "Hurry my curry",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2015/03/Curried-Chicken-with-Couscous1-715x358.jpg",
 			"servings": "8 Servings",

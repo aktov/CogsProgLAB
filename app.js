@@ -19,8 +19,13 @@ var questions = require('./routes/questions');
 var favorites = require('./routes/favorites');
 var recent = require('./routes/recent');
 
+//routes for recipe pages
 var turkeyBurger = require('./routes/turkeyBurger');
 var roasted = require('./routes/roasted');
+var butternut = require('./routes/butternut');
+var enchiladas = require('./routes/enchiladas');
+var basilShrimp = require('./routes/basilShrimp');
+var couscous = require('./routes/couscous');
 
 var app = express();
 
@@ -55,8 +60,13 @@ app.get('/questions', questions.view);
 app.get('/favorites', favorites.view);
 app.get('/recent', recent.view);
 
+//routes for recipe pages
 app.get('/recipePages/turkeyBurger', turkeyBurger.view);
 app.get('/recipePages/roasted', roasted.view);
+app.get('/recipePages/butternut', butternut.view);
+app.get('/recipePages/enchiladas', enchiladas.view);
+app.get('/recipePages/basilShrimp', basilShrimp.view);
+app.get('/recipePages/couscous', couscous.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
