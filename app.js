@@ -19,6 +19,9 @@ var questions = require('./routes/questions');
 var favorites = require('./routes/favorites');
 var recent = require('./routes/recent');
 
+var turkeyBurger = require('./routes/turkeyBurger');
+var roasted = require('./routes/roasted');
+
 var app = express();
 
 // all environments
@@ -51,6 +54,9 @@ app.get('/stats', stats.view);
 app.get('/questions', questions.view);
 app.get('/favorites', favorites.view);
 app.get('/recent', recent.view);
+
+app.get('/recipePages/turkeyBurger', turkeyBurger.view);
+app.get('/recipePages/roasted', roasted.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){

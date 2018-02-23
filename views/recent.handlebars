@@ -23,6 +23,19 @@
 
 	<h1 align="center"> Recently Viewed </h1>
 
-	
+	{{#each recentrecipes}}
+      <div class="recipes" id="{{name}}" >
+        <a class="thumbnail" href="{{recipeURL}}">
+          <img class="img-responzive" src="{{imageURL}}" />
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <label>{{servings}}</label>
+          <br>
+          <label>{{cookTime}}</label>
+        </a>
+      </div>
+      <hr />
+    {{/each}}
+
 </body>
 </html>
