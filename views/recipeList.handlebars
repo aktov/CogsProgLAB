@@ -41,53 +41,12 @@
 	-->
 
 	<h1 align="center"> Recipes </h1>
-
-	 <div class="container">
-		<label><b>Search for recipes</b></label>
-		<input list="listrecipes" placeholder=" enter recipe here">
-			<datalist id="listrecipes">
-				<option>Turkey Burgers</option>
-				<option>Roasted Pumpkin</option>
-				<option>Roasted Chicken</option>
-			</datalist>
-		</input>
-		<a href='recipeList'><button type="submit" style="margin-top: 15px; margin-bottom: 30px">Search!</button></a>
-
-		<p> Or enter ingredients to search for: </p>
-
-		<label><b>Ingredient #1</b></label>
-		<input list="listingredients" placeholder=" enter ingredient">
-			<datalist id="listingredients">
-				<option value="chicken">chicken</option>
-			</datalist>
-		</input>
-
-		<label><b>Ingredient #2</b></label>
-		<input list="listingredients" placeholder=" enter ingredient">
-			<datalist id="listingredients">
-			</datalist>
-		</input>
-
-		<label><b>Ingredient #3</b></label>
-		<input list="listingredients" placeholder=" enter ingredient">
-			<datalist id="listingredients">
-			</datalist>
-		</input>
-
-		<label><b>Ingredient #4</b></label>
-		<input list="listingredients" placeholder=" enter ingredient">
-			<datalist id="listingredients">
-			</datalist>
-		</input>
-
-		<br>
-
-		<a href='recipeList'><button type="submit" style="margin-top: 15px">Search!</button></a>
-	</div> 
-	<br>
-
 	
-	<!--
+	<div class="container">
+		<label><b>Back to search</b></label>
+		<a href='recipeSearch'><button type="submit" style="margin-top: 15px; margin-bottom: 15px">Back</button></a>
+	</div>
+
 	{{#each recipes}}
       <div class="recipes" id="{{name}}" >
         <a class="thumbnail" href="{{recipeURL}}">
@@ -101,7 +60,6 @@
       </div>
       <hr />
     {{/each}}
-	-->
 
 
 
