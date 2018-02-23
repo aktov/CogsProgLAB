@@ -154,6 +154,11 @@ div.scrollmenu a:hover {
   padding: 0;
   display: block;
   margin: 0 auto;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.backbtn{
+  margin-top: 10px;
+  margin-left: 10px;
 }

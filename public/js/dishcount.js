@@ -20,3 +20,7 @@ function dishalert(){
 	alert("You've made "+ localStorage.getItem("count") + " dishes!");
 }
 
+function goBack() {
+	window.history.back();
+}
+

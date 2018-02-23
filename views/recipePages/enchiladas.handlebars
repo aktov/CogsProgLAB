@@ -13,20 +13,29 @@
 	
 </head>
 <body>
+
 	<div id="navbar" class="scrollmenu">
 		<a href='../stats'>Stats</a>
-		<a class="active" href='../recipeSearch'>Recipes</a>
+		<a href='../recipeSearch'>Recipes</a>
 		<a href='../favorites'>Favorites</a>
 		<a href='../recent'>Recent</a>
 		<a href='../options'>Options</a>
 		<a href=#> Achievements </a>
 	</div>
 
+		<button onclick="goBack()" class="backbtn"> Back </button>
+	<div>
+
 	<h2>Slow Cooker Cheesy Chicken Enchiladas</h2>
 
 	<div class="container">
 		<img class="thumbnail" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-715x358.jpg" />
 	</div>
+
+	<div class="navButton">
+	<button>Favorite</button>
+	</div>
+
 
 	<label>Total time: 3 hours 28 mins</label>
 	<br/ >
@@ -73,10 +82,15 @@
 		<li>Top with green onions and cilantro; serve.</li>
 	</ol>
 
+	<div id="checkbox-container">
+	<label><input type="checkbox" onclick="dishcount(this)" id="completedbox"></input> Completed </label>
+	</div>
+</div>
 
 
-<script src="js/jquery-1.11.0.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="/js/dishcount.js"></script>
+<script src="/js/jquery-1.11.0.js"></script>
+<script src="/js/bootstrap.js"></script>
 
 	
 </body>
