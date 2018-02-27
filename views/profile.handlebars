@@ -13,7 +13,8 @@
 </head>
 <body>
 	<div id="navbar" class="scrollmenu">
-		<a class="active" href='stats'>Stats</a>
+		<a class="active" href='profile'>Profile</a>
+		<a href='stats'>Stats</a>
 		<a href='recipeSearch'>Recipes</a>
 		<a href='favorites'>Favorites</a>
 		<a href='recent'>Recent</a>
@@ -22,7 +23,7 @@
 	</div>
 
 	<br />
-	<h1 align="center"> Profile </h1>
+	<h1 align="center" class="header"> PROFILE </h1>
 
 	<p class="facebookLogin" align="center">
 		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
@@ -34,7 +35,6 @@
 			<img id="photo" src="images/profile.png" alt="ProfilePic">
 		</div>
 		<h2 id="name"> Name </h2>
-		<h3 style="margin-top: 30px"><u> Stats</u> </h3>
 
 		<div>
 			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
@@ -47,49 +47,11 @@
 		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
 		<p> Current Level : Beginner </p>
 
-	<div  style="margin-top: 40px" class="slideshow-container container-fluid">
-
-		  <!-- Full-width images with number and caption text -->
-		  <div class="mySlides">
-		    <img src="images/Dishes.png" style="width:100%">
-		    Febuary is almost over! <br>Get some cooking in before its too late! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Servings.png" style="width:100%">
-		    Febuary is almost over! <br>Get some cooking in before its too late! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Types.png" style="width:100%">
-		    You've made a lot of Asian dishes recently. We'll recommend you some more tasty asian dishes! 
-		  </div>
-
-		  <div class="mySlides">
-		    <img src="images/Money.png" style="width:100%">
-		    Total money saved: $1395 <br>
-		    You could buy a high powered gaming computer!
-		  </div>
-
-	</div>
-	<br>
-
-	<!-- The dots/circles -->
-	<div style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span> 
-	  <span class="dot" onclick="currentSlide(2)"></span> 
-	  <span class="dot" onclick="currentSlide(3)"></span> 
-	  <span class="dot" onclick="currentSlide(4)"></span>
-	</div>
-		
-	<p> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
-
 
 	</div>
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/dishcount.js"></script>
-	<script src="js/slideshow.js"></script>
 	{{> facebook}}
 	<script src="/js/facebook.js"></script>
 

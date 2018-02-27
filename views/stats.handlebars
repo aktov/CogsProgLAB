@@ -22,31 +22,10 @@
 		<!--a href=#> Achievements </a-->
 	</div>
 
+	<div class=container>
+
 	<br />
-	<h1 align="center"> Profile </h1>
-
-	<p class="facebookLogin" align="center">
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-		</fb:login-button>
-	</p>
-	
-	<div align="center" >
-		<div  id="facebookPhoto" class="profile">
-			<img id="photo" src="images/profile.png" alt="ProfilePic">
-		</div>
-		<h2 id="name"> Name </h2>
-		<h3 style="margin-top: 30px"><u> Stats</u> </h3>
-
-		<div>
-			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
-			<meter id="expbar" value = "2" min="0" max="10"> 4 out of 10 </meter>
-		</div>
-
-		<p align="left" style="margin-left:40px"> Keep on cooking! </p>
-
-		<p> Total dishes cooked: <p id="output"></p></p>
-		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
-		<p> Current Level : Beginner </p>
+	<h1 align="center" class="header"> STATS </h1>
 
 	<div  style="margin-top: 40px" class="slideshow-container container-fluid">
 
@@ -83,25 +62,15 @@
 	  <span class="dot" onclick="currentSlide(4)"></span>
 	</div>
 		
-	<p> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
+	<p style="margin-top: 40px"> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
 
 
 	</div>
+</div>
 	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/dishcount.js"></script>
 	<script src="js/slideshow.js"></script>
-	{{> facebook}}
-	<script src="/js/facebook.js"></script>
 
-	<script>
-	window.onload=function(){
-		document.getElementById('output').innerHTML= localStorage.getItem("count");
-		document.getElementById('toNextLevel').innerHTML= localStorage.getItem("toLevel");
-		var meter = document.getElementById('expbar');
-  		var exp = Number(localStorage.getItem("count"));
- 		meter.value = exp;
-	}
-	</script>
 </body>
 </html>

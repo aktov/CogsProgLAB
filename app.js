@@ -19,6 +19,7 @@ var stats = require('./routes/stats');
 var questions = require('./routes/questions');
 var favorites = require('./routes/favorites');
 var recent = require('./routes/recent');
+var profile = require('./routes/profile');
 
 //routes for recipe pages
 var turkeyBurger = require('./routes/turkeyBurger');
@@ -61,6 +62,7 @@ app.get('/stats', stats.view);
 app.get('/questions', questions.view);
 app.get('/favorites', favorites.view);
 app.get('/recent', recent.view);
+app.get('/profile', profile.view);
 
 //routes for recipe pages
 app.get('/recipePages/turkeyBurger', turkeyBurger.view);
