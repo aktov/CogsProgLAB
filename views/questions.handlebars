@@ -6,15 +6,16 @@
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../public/css/main.css" type="text/css" rel="stylesheet">
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 
 <html>
+<button onclick="goBack()" class="backbtn"> Back </button>
 
 <h1 style="text-align: center"> Questionaire </h1>
 
-<h3 style="margin-left: 20px; margin-right: 20px"> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer. If your answer is not one of the drop down options, type your answer and let us know so we can add it! (For now we will only have one answer per question.) </h3>
+<h3 style="margin-left: 20px; margin-right: 20px"> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer.</h3>
 
 <div class="container-fluid">
 	<div class="container">
@@ -97,12 +98,14 @@
 </div>
 
 <div>
-	<h4> Create new login (or enter old login) </h4>
+	<h4 style="margin-top: 40px"> Create new login (or enter old login) </h4>
 	<input type="text" placeholder="username" required>
 	<input type="text" placeholder="password" required>
 	<a href="recipeSearch">
-		<button class="btn btn-block"> Go! </button>
+		<button style="margin-top: 25px" class="btn btn-block"> Go! </button>
 	</a>
 </div>
+
+<script src="/js/dishcount.js"></script>
 
 </html>

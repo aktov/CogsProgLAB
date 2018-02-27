@@ -1,7 +1,7 @@
 
 
 function dishcount(checkboxElem){
-	var count = Number(localStorage.getItem("count")) || {};
+	var count = Number(localStorage.getItem("count")) || 0;
 	if(checkboxElem.checked){
 		count++;
 	}
