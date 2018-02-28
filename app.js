@@ -20,6 +20,7 @@ var questions = require('./routes/questions');
 var favorites = require('./routes/favorites');
 var recent = require('./routes/recent');
 var profile = require('./routes/profile');
+var achievements = require('./routes/achievements');
 
 //routes for recipe pages
 var turkeyBurger = require('./routes/turkeyBurger');
@@ -63,6 +64,8 @@ app.get('/questions', questions.view);
 app.get('/favorites', favorites.view);
 app.get('/recent', recent.view);
 app.get('/profile', profile.view);
+app.get('/achievements', achievements.view);
+
 
 //routes for recipe pages
 app.get('/recipePages/turkeyBurger', turkeyBurger.view);

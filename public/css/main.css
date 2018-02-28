@@ -9,6 +9,9 @@ html body{
 
 }
 
+img{
+  border-radius:25px;
+}
 
 
 div {
@@ -280,3 +283,28 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+
+/*Achievements*/
+
+.ach-border{
+  border-radius:25px;
+  border:2px solid black;
+  padding:20px;
+  margin-left:20px;
+  margin-right: 20px;
+
+}
+.ach-container{
+ height: 120px;
+}
+
+.ach-container img {
+  width:auto;
+  height:100%;
+  float:left;
+  margin-left:20px;
+}
+
+
