@@ -184,8 +184,12 @@ button {
   background-color: #717171;
 }
 
-meter{
+#expbar{
 	width:300px;
+}
+
+meter{
+  width:150px;
 }
 
 div.scrollmenu {
@@ -304,7 +308,10 @@ input:checked + .slider:before {
   width:auto;
   height:100%;
   float:left;
-  margin-left:20px;
 }
 
-
+#logo{
+  opacity: 0.75;
+  width:75%;
+  height:75%;
+}
