@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	
+</head>
+<body>
+	<div id="navbar" class="scrollmenu">
+		<a class="active"href='profile'>Profile</a>
+		<a href='recipeSearch'>Recipes</a>
+		<a href='options'>Options</a>
+	</div>
+
+	<div class="submenu">
+		<a href='stats'>Stats</a>
+		<a href='achievements'> Achievements </a>
+	</div>
+
+
+	<div class=container>
+
+	<br />
+	<h1 align="center" class="header"> STATS </h1>
+
+	<div  style="margin-top: 40px" class="slideshow-container container-fluid">
+
+		  <!-- Full-width images with number and caption text -->
+		  <div class="mySlides">
+		    <img src="images/Dishes.png" style="width:100%">
+		    Febuary is almost over! <br>Get some cooking in before its too late! 
+		  </div>
+
+		  <div class="mySlides">
+		    <img src="images/Servings.png" style="width:100%">
+		    Febuary is almost over! <br>Get some cooking in before its too late! 
+		  </div>
+
+		  <div class="mySlides">
+		    <img src="images/Types.png" style="width:100%">
+		    You've made a lot of Asian dishes recently. We'll recommend you some more tasty asian dishes! 
+		  </div>
+
+		  <div class="mySlides">
+		    <img src="images/Money.png" style="width:100%">
+		    Total money saved: $1395 <br>
+		    You could buy a high powered gaming computer!
+		  </div>
+
+	</div>
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+	
+	<p style="margin-top: 40px"> <h4> Tip! </h4> You arent cooking too much this month. Maybe eat out less to save some money? </p>
+
+
+
+	</div>
+</div>
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/dishcount.js"></script>
+	<script src="js/slideshow.js"></script>
+
+</body>
+</html>

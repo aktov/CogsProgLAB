@@ -30,6 +30,27 @@ var enchiladas = require('./routes/enchiladas');
 var basilShrimp = require('./routes/basilShrimp');
 var couscous = require('./routes/couscous');
 
+//routes for Version B Pages
+var recipeSearchB = require('./routes/recipeSearchB');
+var recipeListB = require('./routes/recipeListB');
+var recipeTemplateB = require('./routes/recipeTemplateB');
+var optionsB = require('./routes/optionsB');
+var statsB = require('./routes/statsB');
+var questionsB = require('./routes/questionsB');
+var favoritesB = require('./routes/favoritesB');
+var recentB = require('./routes/recentB');
+var profileB = require('./routes/profileB');
+var achievementsB = require('./routes/achievementsB');
+
+//routes for recipe pages in Version B
+var turkeyBurgerB = require('./routes/turkeyBurgerB');
+var roastedB = require('./routes/roastedB');
+var butternutB = require('./routes/butternutB');
+var enchiladasB = require('./routes/enchiladasB');
+var basilShrimpB = require('./routes/basilShrimpB');
+var couscousB = require('./routes/couscousB');
+
+
 var app = express();
 
 // all environments
@@ -55,7 +76,11 @@ if ('development' == app.get('env')) {
 // Example route
 // app.get('/users', user.list);
 app.get('/', index.view);
-app.get('/recipeSearch', recipeSearch.view);
+
+app.get('/recipeSearch', recipeSearch.viewABTest);
+//app.get('/recipeSearch', recipeSearch.viewATest);
+//app.get('/recipeSearch', recipeSearch.viewBTest);
+
 app.get('/recipeList', recipeList.view);
 app.get('/recipeTemplate', recipeTemplate.view);
 app.get('/options', options.view);
@@ -74,6 +99,29 @@ app.get('/recipePages/butternut', butternut.view);
 app.get('/recipePages/enchiladas', enchiladas.view);
 app.get('/recipePages/basilShrimp', basilShrimp.view);
 app.get('/recipePages/couscous', couscous.view);
+
+//routes for pages in Version B
+app.get('/viewsB/recipeSearch', recipeSearchB.view);
+app.get('/viewsB/recipeList', recipeListB.view);
+app.get('/viewsB/recipeTemplate', recipeTemplateB.view);
+app.get('/optionsB', optionsB.view);
+app.get('/viewsB/stats', statsB.view);
+app.get('/viewsB/questions', questionsB.view);
+app.get('/viewsB/favorites', favoritesB.view);
+app.get('/viewsB/recent', recentB.view);
+app.get('/viewsB/profile', profileB.view);
+app.get('/viewsB/achievements', achievementsB.view);
+
+
+//routes for recipe pages
+app.get('/viewsB/recipePages/turkeyBurger', turkeyBurgerB.view);
+app.get('/viewsB/recipePages/roasted', roastedB.view);
+app.get('/viewsB/recipePages/butternut', butternutB.view);
+app.get('/viewsB/recipePages/enchiladas', enchiladasB.view);
+app.get('/viewsB/recipePages/basilShrimp', basilShrimpB.view);
+app.get('/viewsB/recipePages/couscous', couscousB.view);
+
+
 
 
 http.createServer(app).listen(app.get('port'), function(){

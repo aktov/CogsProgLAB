@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
+</head>
+
+<body>
+	{{#if versionA}}
+	<div id="navbar" class="scrollmenu">
+		<a href='profile'>Profile</a>
+		<a href='stats'>Stats</a>
+		<a href='achievements'> Achievements </a>
+		<a class="active" href='recipeSearch'>Recipes</a>
+		<a href='favorites'>Favorites</a>
+		<a href='recent'>Recent</a>
+		<a href='options'>Options</a>
+	</div>
+
+	{{else}}
+	<div id="navbar" class="scrollmenu">
+		<a href='profile'>Profile</a>
+		<a class="active" href='recipeSearch'>Recipes</a>
+		<a href='options'>Options</a>
+	</div>
+
+	<div class="submenu">
+		<a href='favorites'>Favorites</a>
+		<a href='recent'>Recent</a>
+	</div>
+	{{/if}}
+
+
+
+	<!--
+	<div id="navbar" class="scrollmenu">
+		<a href='stats'>Stats</a>
+		<a class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href='#'>Recipes
+			<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href='recipeSearch'>Search</a></li>
+				<li><a href='favorites'>Favorites</a></li>
+				<li><a href='recent'>Recent Recipes</a></li>
+			</ul>
+		</a>
+		<a href='options'>Options</a>
+		<a href=#>Achievements</a>
+	</div>
+	-->
+
+	<h1 align="center" class="header"> RECIPES </h1>
+
+	 <div class="container">
+		<label><b>Search for recipes</b></label>
+		<input list="listrecipes" placeholder=" enter recipe here">
+			<datalist id="listrecipes">
+				<option>Turkey Burgers</option>
+				<option>Roasted Pumpkin</option>
+				<option>Roasted Chicken</option>
+			</datalist>
+		</input>
+		<a href='recipeList'><button type="submit" style="margin-top: 15px; margin-bottom: 30px">Search!</button></a>
+
+		<p style="margin-top: 30px"> Or enter ingredients to search for: </p>
+
+		<label><b>Ingredient #1</b></label>
+		<input list="listingredients" placeholder=" enter ingredient">
+			<datalist id="listingredients">
+				<option value="chicken">chicken</option>
+			</datalist>
+		</input>
+
+		<label><b>Ingredient #2</b></label>
+		<input list="listingredients" placeholder=" enter ingredient">
+			<datalist id="listingredients">
+			</datalist>
+		</input>
+
+		<label><b>Ingredient #3</b></label>
+		<input list="listingredients" placeholder=" enter ingredient">
+			<datalist id="listingredients">
+			</datalist>
+		</input>
+
+		<label><b>Ingredient #4</b></label>
+		<input list="listingredients" placeholder=" enter ingredient">
+			<datalist id="listingredients">
+			</datalist>
+		</input>
+
+		<br>
+
+		<a href='recipeList'><button type="submit" style="margin-top: 20px">Search!</button></a>
+
+		<div>
+		<a href='recipeList'><button style="margin-top: 50px"> Show all recipes </button></a>
+	</div>
+	</div> 
+	<br>
+
+	
+	<!--
+	{{#each recipes}}
+      <div class="recipes" id="{{name}}" >
+        <a class="thumbnail" href="{{recipeURL}}">
+          <img class="img-responzive" src="{{imageURL}}" />
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <label>{{servings}}</label>
+          <br>
+          <label>{{cookTime}}</label>
+        </a>
+      </div>
+      <hr />
+    {{/each}}
+	-->
+
+
+
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.js"></script>
+
+	
+</body>
+</html>

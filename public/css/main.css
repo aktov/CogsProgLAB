@@ -216,6 +216,25 @@ div.scrollmenu a:hover {
     background-color: #777;
 }
 
+div.submenu {
+  background-color: #777;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.submenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+
+div.submenu a:hover {
+    background-color: #777;
+}
+
+
 .active{
   background-color: #2ea095;
 }
