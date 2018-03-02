@@ -13,14 +13,24 @@
 <html>
 <button onclick="goBack()" class="backbtn"> Back </button>
 
-<h1 style="text-align: center"> Questionaire </h1>
+<h1 class="header" style="text-align: center"> PREFERENCES </h1>
 
-<h3 style="margin-left: 20px; margin-right: 20px"> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer.</h3>
+<h4 style="margin-left: 20px; margin-right: 20px"> 
+	Our app will recommend you recipes based on what you answer.
+</h4>
+<h4 style="margin-left: 20px; margin-right: 20px"> 
+	Choices made here can be changed later.
+</h4>
+<h4 style="margin-left: 20px; margin-right: 20px"> 
+	Feel free to skip any you do not wish to answer.
+</h4>
 
 <div class="container-fluid">
 	<div class="container">
-		<h3> Question 1) </h3>
-		<p> What is your favorite type of food?</p>
+		<!-- <h3> Question 3) </h3> -->
+		<p style="text-align: left; margin-left: 5px"> 
+		1) What is your favorite type of food?
+		</p>
 		<input list="likefoodtypes" placeholder="Ex.Asian">
 			<datalist id="likefoodtypes">
 				<option value="Chinese">
@@ -45,15 +55,17 @@
 	</div>
 
 	<div class="container">
-		<h3> Question 2) </h3>
-		<p> What type of food do you dislike the most?</p>
+		<p style="text-align: left; margin-left: 5px"> 
+			2) What type of food do you dislike the most?
+		</p>
 		<input  list="likefoodtypes" placeholder="Ex.Asian">	
 		</input>
 	</div>
 
 	<div class="container">
-		<h3> Question 3) </h3>
-		<p> Any dietary restrictions?</p>
+		<p style="text-align: left; margin-left: 5px"> 
+			3) Any dietary restrictions?
+		</p>
 		<input  list="dietaryrestriction" placeholder="ex.Vegan">
 			<datalist id="dietaryrestriction">
 				<option value="Ovo-Vegetarian">
@@ -70,8 +82,9 @@
 	</div>
 
 	<div class="container">
-		<h3> Question 4) </h3>
-		<p> Anything you're allergic to?</p>
+		<p style="text-align: left; margin-left: 5px">  
+			4) Anything you're allergic to?
+		</p>
 		<input list="allergies" placeholder="ex.Peanuts">
 			<datalist id="allergies">
 				<option value="Peanuts">
@@ -86,8 +99,9 @@
 	</div>
 
 	<div class="container">
-		<h3> Question 5) </h3>
-		<p> What do you believe is your own cooking skill?</p>
+		<p style="text-align: left; margin-left: 5px">  
+			5) What do you believe is your own cooking skill?
+		</p>
 		<input list="skill" placeholder="Beginner">
 			<datalist id="skill">
 				<option value="Beginner">
@@ -98,7 +112,7 @@
 </div>
 
 <div>
-	<h4 style="margin-top: 40px"> Create new login (or enter old login) </h4>
+	<h4 style="margin-top: 40px"> Create new login </h4>
 	<input type="text" placeholder="username" required>
 	<input type="text" placeholder="password" required>
 	<a href="recipeSearch">
