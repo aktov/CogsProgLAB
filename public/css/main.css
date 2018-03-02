@@ -27,12 +27,17 @@ label {
 
 
 h1 {
-  font-family: "Arial";
+  font-family: arial;
 }
 
 
 button {
   border-radius: 5pt;
+}
+
+
+label {
+  font-family: arial;
 }
 
 
@@ -44,6 +49,7 @@ button {
 
 .header {
   font-family: courier;
+  font-weight: bold;
 }
 
 
