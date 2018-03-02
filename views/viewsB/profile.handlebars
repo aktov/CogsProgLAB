@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html >
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	
+</head>
+<body>
+	<div id="navbar" class="scrollmenu">
+		<a class="active" href='profile'>Profile</a>
+		<a href='recipeSearch'>Recipes</a>
+		<a href='options'>Options</a>
+	</div>
+
+	<div class="submenu">
+		<a href='stats'>Stats</a>
+		<a href='achievements'> Achievements </a>
+	</div>
+
+	<br />
+	<h1 align="center" class="header"> PROFILE </h1>
+
+	<p class="facebookLogin" align="center">
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button>
+	</p>
+	
+	<div align="center">
+		<div  id="facebookPhoto" class="profile">
+			<img id="photo" src="images/Fire.png" alt="ProfilePic">
+		</div>
+		<h2 id="name"> Name </h2>
+
+		<div>
+			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
+			<meter id="expbar" value = "2" min="0" max="10"> 4 out of 10 </meter>
+		</div>
+
+		<p align="left" style="margin-left:40px"> Keep on cooking! </p>
+
+		<p> Total dishes cooked: <p id="output"></p></p>
+		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
+		<p> Current Level : Beginner </p>
+
+
+	</div>
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/dishcount.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
+
+	<script>
+	window.onload=function(){
+		document.getElementById('output').innerHTML= localStorage.getItem("count");
+		document.getElementById('toNextLevel').innerHTML= localStorage.getItem("toLevel");
+		var meter = document.getElementById('expbar');
+  		var exp = Number(localStorage.getItem("count"));
+ 		meter.value = exp;
+	}
+	</script>
+</body>
+</html>
