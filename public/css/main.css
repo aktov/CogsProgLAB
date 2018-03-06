@@ -434,3 +434,22 @@ li a {
 .active, .dot:hover {
   background-color: #FF8C00;
 }
+
+.searchbtn{
+    border: none; 
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  width: 75%; 
+  height: 40px; 
+  background-color: #FF8C00; 
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+#mainsearch{
+  width:75%;
+  height:auto;
+}
