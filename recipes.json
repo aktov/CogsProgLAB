@@ -6,7 +6,8 @@
 			"description": "Flavorful turkey burgers seasoned with fresh herbs",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/turkey-Burgers_b6s7ao-394x197.jpg",
 			"servings": "4 Servings",
-			"cookTime": "Total Time: 35 minutes"			
+			"cookTime": "Total Time: 35 minutes",
+			"difficulty": "Easy"			
 		},
 		{
 			"name": "Roasted Pumpkin, Sweet Potato, and Brown Rice Pilaf",
@@ -14,7 +15,8 @@
 			"description": "A side dish hearty enough to be your entree",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Pumpkin-Pilaf-700x350_d5hitz-394x197.jpg",
 			"servings": "8 Servings",
-			"cookTime": "Total Time: 1 hour and 45 minutes"				
+			"cookTime": "Total Time: 1 hour and 45 minutes",	
+			"difficulty": "Hard"		
 		},
 		{
 			"name": "Roasted Chicken and Butternut Squash Soup",
@@ -22,7 +24,8 @@
 			"description": "A sweet and savory chicken soup",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Roasted-Chicken-and-Butternut-Squash-Soup_kuhic1-394x197.jpg",
 			"servings": "8 Servings",
-			"cookTime": "Total Time: 40 minutes"				
+			"cookTime": "Total Time: 40 minutes",
+			"difficulty": "Medium"				
 		},
 		{
 			"name": "Slow Cooker Chicken Enchiladas",
@@ -30,7 +33,8 @@
 			"description": "Top with a runny egg for even more awesomeness",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-in-post.jpg",
 			"servings": "10 Servings",
-			"cookTime": "Total Time: 3 hours and 30 minutes"				
+			"cookTime": "Total Time: 3 hours and 30 minutes",	
+			"difficulty": "Easy"			
 		},
 		{
 			"name": "Garlic Shrimp with Zucchini Noodles",
@@ -38,7 +42,8 @@
 			"description": "Oodles of Zoodles for all your carb-free needs",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Garlic-Basil-Shrimp-with-Zucchini-Noodles-394x197.jpg",
 			"servings": "4 Servings",
-			"cookTime": "Total Time: 20 minutes"	
+			"cookTime": "Total Time: 20 minutes",
+			"difficulty": "Easy"	
 		},
 		{
 			"name": "Curried Chicken with Couscous",
@@ -46,7 +51,8 @@
 			"description": "Hurry my curry",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2015/03/Curried-Chicken-with-Couscous1-715x358.jpg",
 			"servings": "8 Servings",
-			"cookTime": "Total Time: 45 minutes"	
+			"cookTime": "Total Time: 45 minutes",	
+			"difficulty": "Medium"
 		}
 	]
 }
