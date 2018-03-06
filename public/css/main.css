@@ -9,6 +9,12 @@ html body{
 
 }
 
+#title{
+  margin:auto;
+  width:10%
+  height:auto;
+}
+
 img{
   border-radius:25px;
 }
@@ -336,7 +342,6 @@ input:checked + .slider:before {
 }
 
 #logo{
-  opacity: 0.75;
   width:75%;
   height:75%;
 }
