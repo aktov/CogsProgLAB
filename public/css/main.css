@@ -186,10 +186,6 @@ label {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 #expbar{
 	width:300px;
 }
@@ -325,6 +321,7 @@ input:checked + .slider:before {
   margin-right: 20px;
 
 }
+
 .ach-container{
  height: 120px;
 }
@@ -339,4 +336,96 @@ input:checked + .slider:before {
   opacity: 0.75;
   width:75%;
   height:75%;
+}
+
+
+/* Intro Screen */
+.texts {
+  font-family: Calibri;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #4d5259;
+}
+
+.textbox {
+  font-family: Calibri;
+  border: none; 
+  border-radius: 5px; 
+  margin-bottom: 25px; 
+  width: 100%; 
+  height: 40px;
+}
+
+.buttons {
+  border: none; 
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  width: 100%; 
+  height: 40px; 
+  background-color: #FF8C00; 
+  color: white;
+}
+
+.listDiv {
+  border: none; 
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  width: 100%; 
+  height: 120px; 
+  background-color: white; 
+  color: #4d5259;
+}
+
+.listHeader {
+  font-family: Calibri;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px; 
+  width: 100%; 
+  color: #4d5259;
+}
+
+.listLabel {
+  font-family: Calibri;
+  text-align: left;
+  margin-left: 10px;
+  width: 100%; 
+  color: #4d5259;
+}
+
+.check {
+  width: 30px;
+  height: 30px;
+}
+
+/* Bottom fixed nav bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4d5259;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: Calibri;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active, .dot:hover {
+  background-color: #FF8C00;
 }

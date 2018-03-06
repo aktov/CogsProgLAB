@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container" style="width: 80%;">
+		<img  id="logo" src="/images/Fire logo.png" alt="logo" style="margin-top: 100px">
+
+		<a href=""> <button style="margin-top: 20px" class="newAccount buttons" type="submit">
+			CREATE MEAL PLAN  
+		</button></a>
+		<br>
+		<h5 class="texts"> PLANNED MEALS</h5>
+		<div class="listDiv"> 
+			<label class="listHeader"> Turkey Burgers </label>
+			<label class="listLabel" style="float: left;"> MEALS LEFT: </label>
+			<label class="listLabel" style="font-size: 50px; text-align: center; float: right;">3</label>
+		</div>
+
+		<div class="listDiv"> 
+			<label class="listHeader"> Turkey Burgers </label>
+			<label class="listLabel">  </label>
+		</div>
+
+		<div class="listDiv"> 
+			<label class="listHeader"> Turkey Burgers </label>
+			<label class="listLabel">  </label>
+		</div>
+
+		<div class="listDiv"> 
+			<label class="listHeader"> Turkey Burgers </label>
+			<label class="listLabel">  </label>
+		</div>
+	</div>
+
+
+<ul>
+  <li><a href="#news">PROFILE</a></li>
+  <li><a class="active" href="#home">HOME</a></li>
+  <li><a href="#contact">SEARCH</a></li>
+  <li><a href="#about">OPTIONS</a></li>
+</ul>
+  
+
+	<!-- to hide the button -->
+	<script>
+	function toggle() {
+	    var elements = document.querySelectorAll('.newAccount');
+
+	    for (var i = 0; i < elements.length; i++) {
+	    	if (elements[i].style.display === "none") {
+	    		elements[i].style.display = "block";
+	    	}
+	    	else {
+	    		elements[i].style.display = "none";
+	    	}
+	    }
+	    console.log("ssd");
+	}
+	</script>
+</body>
+</html>

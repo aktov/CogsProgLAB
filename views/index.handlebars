@@ -12,31 +12,61 @@
 </head>
 
 <body>
-	<h1 class="header" align="center" style="margin-top:100px; margin-bottom: 25px"> <b>MEAL PREPPY</b> </h1>
+	<h1 class="header" align="center" style="margin-top:100px; margin-bottom: 25px"> <b>PREPD</b> </h1>
 
 
 
 	
-	<div class="container">
+	<div class="container" style="width: 80%">
+		<br>
+		<h5 class="newAccount texts"> Username </h5>
+		<h5 style="display: none" class="newAccount texts"> 
+		Create Username </h5>
+		<input class="textbox" type="text" placeholder="    Enter Username" name="uname" required>
+		<br>
+		<h5 class="newAccount texts"> Password </h5>
+		<h5 style="display: none" class="newAccount texts"> 
+		Create Password </h5>
+		<input style="margin-bottom: 0px" class="textbox" type="password" placeholder="    Enter Password" name="psw" required>
+		<br>
+
+		<h5 style="display: none;" class="newAccount texts"> Confirm Password </h5>
+		<input style="display: none;" class="newAccount textbox" type="password" placeholder="    Enter Password Again" name="psw" required>
+		<br>
+
+		<label class="newAccount listLabel" style="font-size: 20px; text-align: center";>
+		  	<input style="border: none; width: 20px; height: 20px;margin-bottom: 20px" type="checkbox" checked="checked"> 
+			</input>
+			Remember me
+		</label>
+
+		<a href="home"> <button class="newAccount buttons" type="submit">LOGIN</button></a>
+		<!--<hr style="border-color: white; size: 3px;">-->
+
+		<h5 class="newAccount texts"> Or create a new account! </h5>
+		<button class="newAccount buttons" type="submit" onclick="toggle()">SIGN UP</button>
+
+		<a href="home"> <button style="display: none;" class="newAccount buttons" type="submit" >CONTINUE</button></a>
 		
 		<br>
-		<label style="margin-right: 10px">
-			<strong>Username</strong>
-		</label>
-		<input type="text" placeholder="Enter Username" name="uname" required>
-		<br />
-		<label style="margin-bottom: 20px; margin-right: 10px">
-			<strong>Password</strong>
-		</label>
-		<input type="password" placeholder="Enter Password" name="psw" required>
-		<br />
-		<a href="recipeSearch"><button style="margin-bottom: 20px; margin-right: 10px" type="submit">Login</button></a>
-		<label>
-		  <input type="checkbox" checked="checked"> Remember me
-		</label>
-		<br />
-		<label style="margin-top: 30px">New User? Click <a href="questions">here</a>
-			<br>
+
+		<!-- to hide the button -->
+		<script>
+		function toggle() {
+		    var elements = document.querySelectorAll('.newAccount');
+
+		    for (var i = 0; i < elements.length; i++) {
+		    	if (elements[i].style.display === "none") {
+		    		elements[i].style.display = "block";
+		    	}
+		    	else {
+		    		elements[i].style.display = "none";
+		    	}
+		    }
+		    console.log("ssd");
+		}
+		</script>
+
 			<img  id="logo" src="/images/Fire logo.png" alt="logo" style="margin-top: 40px">
 	</div>
 	
