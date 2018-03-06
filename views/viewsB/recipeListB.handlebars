@@ -14,32 +14,16 @@
 </head>
 
 <body>
-		
-	{{#if versionA}}
 	<div id="navbar" class="scrollmenu">
 		<a href='profile'>Profile</a>
-		<a href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
 		<a class="active" href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
 		<a href='options'>Options</a>
 	</div>
 
-	{{else}}
 	<div class="submenu">
 		<a href='favorites'>Favorites</a>
 		<a href='recent'>Recent</a>
 	</div>
-
-	<div id="navbar" class="scrollmenu">
-		<a href='profileB'>Profile</a>
-		<a class="active" href='recipeSearchB'>Recipes</a>
-		<a href='optionsB'>Options</a>
-	</div>
-
-	{{/if}}
-
 
 	<!--
 	<div id="navbar" class="scrollmenu">
@@ -58,31 +42,13 @@
 	</div>
 	-->
 
-	<h1 align="center" class="header"> SEARCH FOR RECIPES </h1>
-
+	<h1 align="center" class="header"> RECIPES </h1>
 	
+	<div class="container">
+		<label><b>Back to search</b></label>
+		<a href='recipeSearch'><button type="submit" style="margin-top: 15px; margin-bottom: 15px">Back</button></a>
+	</div>
 
-	 <div class="container">
-	 	
-
-
-		<h3><b></b></h3> <br>
-		<input id="mainsearch" placeholder="Enter recipe here"></input>
-			<br>
-		<input type="checkbox"> Search for this ingredient </input>
-
-		<a href='recipeList'><button type="submit" class="searchbtn">Search!</button></a>
-			 	<br>
-
-	 	<h4 style="margin-bottom: 30px"> OR </h4>
-	
-	
-<a href='recipeList'><button class="searchbtn"> Show all recipes </button></a>
-	</div> 
-	<br>
-
-	
-	<!--
 	{{#each recipes}}
       <div class="recipes" id="{{name}}" >
         <a class="thumbnail" href="{{recipeURL}}">
@@ -96,9 +62,6 @@
       </div>
       <hr />
     {{/each}}
-	-->
-
-	
 
 
 

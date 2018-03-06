@@ -7,5 +7,5 @@ var data = require('../recipes.json');
 
 exports.view = function(req, res){
 	console.log(data);
-  res.render('/viewsB/recipeList', data);
+  res.render('recipeListB', data);
 };

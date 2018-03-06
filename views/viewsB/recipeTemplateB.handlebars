@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	
+</head>
+<body>
+	<div class="backButton">
+		<a href="recipeSearch">
+		<img src="../images/back.jpg" height="15%" width="15%" alt="back" />
+		</a>
+	</div>
+
+	<br />
+	<div class="foodPicture" style="margin-top: 50px" >
+		<a>
+		<img src="../images/foodDefault.jpg"  height="10%" width="10%" alt="food" />
+		</a>
+	</div>
+	<br />
+
+	
+	
+	<div class="recipeSummary">
+		<label>RECIPE NAME</label>
+		<br />
+		<label>DIFFICULTY: </label><b>MEDIUM</b>
+		<br />
+		<label>Servings: 9</label>
+		<br />
+		<label>Cost Per Serving: $10</label>
+		<br />
+		<label>Cook Time: 45 minutes</label>
+		<br />
+	</div>
+
+	<div class="Ingredients" style="margin-top: 50px">
+		<h2> Ingredients </h2>
+		<table class="Ingredientlist" align="center">
+			<tr>
+				<td> 1) Food </td>
+				<td> 2) Food </td>
+			</tr>
+			<tr>
+				<td> 3) Food </td>
+				<td> 4) Food </td>
+			</tr>
+			<tr> 
+				<td> 5) Food </td>
+				<td> 6) Food </td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="Instruction" style="margin-top: 50px">
+		<h2>Instructions</h2>
+		<p> 1) Do this </p>
+		<p> 2) Do that </p>
+		<p> 3) Do everything </p>
+
+	</div>
+	
+	<div class="navButton">
+	<button>Favorite</button>
+	</div>
+
+	<div id="checkbox-container">
+	<label><input type="checkbox" onclick="dishcount(this)" id="completedbox"></input> Completed </label>
+	</div>
+
+
+<script src="js/dishcount.js"></script>
+
+</body>
+</html>

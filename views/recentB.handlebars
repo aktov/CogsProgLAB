@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>LAByrinth</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	
+</head>
+<body>
+	<div id="navbar" class="scrollmenu">
+		<a href='profileB'>Profile</a>
+		<a class="active" href='recipeSearchB'>Recipes</a>
+		<a href='optionsB'>Options</a>
+	</div>
+
+	<div class="submenu">
+		<a href='favoritesB'>Favorites</a>
+		<a href='recentB'>Recent</a>
+	</div>
+
+	<h1 align="center" class="header"> RECENTLY VIEWED </h1>
+
+	{{#each recentrecipes}}
+      <div class="recipes" id="{{name}}" >
+        <a class="thumbnail" href="{{recipeURL}}">
+          <img class="img-responzive" src="{{imageURL}}" />
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <label>{{servings}}</label>
+          <br>
+          <label>{{cookTime}}</label>
+        </a>
+      </div>
+      <hr />
+    {{/each}}
+
+</body>
+</html>

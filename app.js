@@ -103,16 +103,16 @@ app.get('/recipePages/basilShrimp', basilShrimp.view);
 app.get('/recipePages/couscous', couscous.view);
 
 //routes for pages in Version B
-app.get('/viewsB/recipeSearch', recipeSearchB.view);
-app.get('/viewsB/recipeList', recipeListB.view);
-app.get('/viewsB/recipeTemplate', recipeTemplateB.view);
+app.get('/recipeSearchB', recipeSearchB.view);
+app.get('/recipeListB', recipeListB.view);
+app.get('/recipeTemplateB', recipeTemplateB.view);
 app.get('/optionsB', optionsB.view);
-app.get('/viewsB/stats', statsB.view);
-app.get('/viewsB/questions', questionsB.view);
-app.get('/viewsB/favorites', favoritesB.view);
-app.get('/viewsB/recent', recentB.view);
-app.get('/viewsB/profile', profileB.view);
-app.get('/viewsB/achievements', achievementsB.view);
+app.get('/statsB', statsB.view);
+app.get('/questionsB', questionsB.view);
+app.get('/favoritesB', favoritesB.view);
+app.get('/recentB', recentB.view);
+app.get('/profileB', profileB.view);
+app.get('/achievementsB', achievementsB.view);
 
 
 //routes for recipe pages

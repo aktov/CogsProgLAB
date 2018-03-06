@@ -14,32 +14,16 @@
 </head>
 
 <body>
-		
-	{{#if versionA}}
-	<div id="navbar" class="scrollmenu">
-		<a href='profile'>Profile</a>
-		<a href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
-		<a class="active" href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-		<a href='options'>Options</a>
-	</div>
-
-	{{else}}
-	<div class="submenu">
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-	</div>
-
 	<div id="navbar" class="scrollmenu">
 		<a href='profileB'>Profile</a>
 		<a class="active" href='recipeSearchB'>Recipes</a>
 		<a href='optionsB'>Options</a>
 	</div>
 
-	{{/if}}
-
+	<div class="submenu">
+		<a href='favoritesB'>Favorites</a>
+		<a href='recentB'>Recent</a>
+	</div>
 
 	<!--
 	<div id="navbar" class="scrollmenu">
@@ -58,6 +42,7 @@
 	</div>
 	-->
 
+	
 	<h1 align="center" class="header"> SEARCH FOR RECIPES </h1>
 
 	
@@ -97,8 +82,6 @@
       <hr />
     {{/each}}
 	-->
-
-	
 
 
 
