@@ -25,6 +25,9 @@
 		<a href='recentB'>Recent</a>
 	</div>
 
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>
 	<!--
 	<div id="navbar" class="scrollmenu">
 		<a href='stats'>Stats</a>
@@ -42,27 +45,38 @@
 	</div>
 	-->
 
-	
-	<h1 align="center" class="header"> SEARCH FOR RECIPES </h1>
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>
 
-	
+	<h1 align="center" class="header" style="margin-top: 50px"> 
+		SEARCH FOR RECIPES 
+	</h1>
 
 	 <div class="container">
-	 	
+		<br>
+		<input class="textbox" placeholder="    Enter recipe here"></input>
+		<br>
 
+	<!--
+		<label class="listLabel" style="font-size: 20px; text-align: center";>
+		  	<input style="border: none; width: 20px; height: 20px;margin-bottom: 20px" type="checkbox" > 
+			</input>
+			Search for this ingredient
+		</label>
+	-->
 
-		<h3><b></b></h3> <br>
-		<input id="mainsearch" placeholder="Enter recipe here"></input>
-			<br>
-		<input type="checkbox"> Search for this ingredient </input>
-
-		<a href='recipeList'><button type="submit" class="searchbtn">Search!</button></a>
+		<a href='recipeList'><button type="submit" class="buttons">
+			SEARCH
+		</button></a>
 			 	<br>
 
-	 	<h4 style="margin-bottom: 30px"> OR </h4>
+	 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 			OR 
+	 	</h4>
 	
-	
-<a href='recipeList'><button class="searchbtn"> Show all recipes </button></a>
+		<a href='recipeList'><button class="buttons"> 
+			SHOW ALL RECIPES
+		</button></a>
 	</div> 
 	<br>
 
@@ -87,6 +101,7 @@
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="/js/dishcount.js"></script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -16,28 +16,28 @@
 <body>
 		
 	{{#if versionA}}
-	<div id="navbar" class="scrollmenu">
-		<a href='profile'>Profile</a>
-		<a href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
-		<!--a href="home"> Home </a-->
-		<a class="active" href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-		<a href='options'>Options</a>
-	</div>
+		<div id="navbar" class="scrollmenu">
+			<a href='profile'>Profile</a>
+			<a href='stats'>Stats</a>
+			<a href='achievements'> Achievements </a>
+			<!--a href="home"> Home </a-->
+			<a class="active" href='recipeSearch'>Recipes</a>
+			<a href='favorites'>Favorites</a>
+			<a href='recent'>Recent</a>
+			<a href='options'>Options</a>
+		</div>
 
 	{{else}}
-	<div class="submenu">
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-	</div>
+		<div class="submenu">
+			<a href='favorites'>Favorites</a>
+			<a href='recent'>Recent</a>
+		</div>
 
-	<div id="navbar" class="scrollmenu">
-		<a href='profileB'>Profile</a>
-		<a class="active" href='recipeSearchB'>Recipes</a>
-		<a href='optionsB'>Options</a>
-	</div>
+		<div id="navbar" class="scrollmenu">
+			<a href='profileB'>Profile</a>
+			<a class="active" href='recipeSearchB'>Recipes</a>
+			<a href='optionsB'>Options</a>
+		</div>
 
 	{{/if}}
 
@@ -58,27 +58,54 @@
 		<a href=#>Achievements</a>
 	</div>
 	-->
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>
 
-	<h1 align="center" class="header"> SEARCH FOR RECIPES </h1>
-
+	<h1 align="center" class="header" style="margin-top: 50px"> 
+		SEARCH FOR RECIPES 
+	</h1>
 	
 
 	 <div class="container">
-	 	
+		<br>
+		<input class="textbox" placeholder="    Enter recipe here"></input>
+		<br>
 
+	<!--
+		<label class="listLabel" style="font-size: 20px; text-align: center";>
+		  	<input style="border: none; width: 20px; height: 20px;margin-bottom: 20px" type="checkbox" > 
+			</input>
+			Search for this ingredient
+		</label>
+	-->
 
-		<h3><b></b></h3> <br>
-		<input id="mainsearch" placeholder="Enter recipe here"></input>
-			<br>
-		<input type="checkbox"> Search for this ingredient </input>
+		{{#if versionA}}
+			<a href='recipeList'><button type="submit" class="buttons">
+				SEARCH
+			</button></a>
+				 	<br>
 
-		<a href='recipeList'><button type="submit" class="searchbtn">Search!</button></a>
-			 	<br>
+		 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 		OR 
+		 	</h4>
+		
+			<a href='recipeList'><button class="buttons"> 
+				SHOW ALL RECIPES
+			</button></a>
 
-	 	<h4 style="margin-bottom: 30px"> OR </h4>
-	
-	
-<a href='recipeList'><button class="searchbtn"> Show all recipes </button></a>
+		{{else}}
+			<a href='recipeListB'><button type="submit" class="buttons">
+				SEARCH
+			</button></a>
+				 	<br>
+
+		 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 		OR 
+		 	</h4>
+
+			<a href='recipeListB'><button class="buttons"> 
+				SHOW ALL RECIPES
+			</button></a>
+		{{/if}}
 	</div> 
 	<br>
 
@@ -105,6 +132,7 @@
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="/js/dishcount.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114632773-2"></script>

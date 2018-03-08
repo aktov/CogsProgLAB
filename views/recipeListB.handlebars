@@ -25,6 +25,10 @@
 		<a href='recent'>Recent</a>
 	</div>
 
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>
+
 	<!--
 	<div id="navbar" class="scrollmenu">
 		<a href='stats'>Stats</a>
@@ -42,31 +46,29 @@
 	</div>
 	-->
 
-	<h1 align="center" class="header"> RECIPES </h1>
+	<h1 align="center" class="header" style="margin-top: 50px"> RECIPES </h1>
 	
-	<div class="container">
-		<label><b>Back to search</b></label>
-		<a href='recipeSearch'><button type="submit" style="margin-top: 15px; margin-bottom: 15px">Back</button></a>
+	<div class="container" style="width: 90%">
+	
+		{{#each recipes}}
+	      <div class="recipes" id="{{name}}" >
+	        <a class="thumbnail" style="border-radius: 10px" href="{{recipeURL}}">
+	          <img class="img-responzive" style="border-radius: 10px" src="{{imageURL}}" />
+	          <h3>{{name}}</h3>
+	          <p>{{description}}</p>
+	          <label>{{servings}}</label>
+	          <br>
+	          <label>{{cookTime}}</label>
+	        </a>
+	      </div>
+	      <hr />
+	    {{/each}}
+
 	</div>
-
-	{{#each recipes}}
-      <div class="recipes" id="{{name}}" >
-        <a class="thumbnail" href="{{recipeURL}}">
-          <img class="img-responzive" src="{{imageURL}}" />
-          <h3>{{name}}</h3>
-          <p>{{description}}</p>
-          <label>{{servings}}</label>
-          <br>
-          <label>{{cookTime}}</label>
-        </a>
-      </div>
-      <hr />
-    {{/each}}
-
-
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="/js/dishcount.js"></script>
 
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->

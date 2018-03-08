@@ -42,34 +42,35 @@
 		<a href=#>Achievements</a>
 	</div>
 	-->
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>	
 
-	<h1 align="center" class="header"> RECIPES </h1>
-	
-	<div class="container">
-		<label><b>Back to search</b></label>
-		<a href='recipeSearch'><button type="submit" style="margin-top: 15px; margin-bottom: 15px">Back</button></a>
+	<div class="container" style="width: 90%">
+		<h1 align="center" class="header" style="margin-top: 50px"> RECIPES </h1>
+
+		{{#each recipes}}
+	      <div class="recipeList" id="{{name}}" >
+	        <a class="thumbnail" href="{{recipeURL}}">
+	          <img class="img-responzive" src="{{imageURL}}" />
+	          <h3>{{name}}</h3>
+	          <p>{{description}}</p>
+	          <label>{{servings}}</label>
+	          <br>
+	          <label>{{cookTime}}</label>
+	          <br>
+	          <label>{{difficulty}}</label>
+	        </a>
+	      </div>
+	      <hr />
+	    {{/each}}
+
 	</div>
-
-	{{#each recipes}}
-      <div class="recipes" id="{{name}}" >
-        <a class="thumbnail" href="{{recipeURL}}">
-          <img class="img-responzive" src="{{imageURL}}" />
-          <h3>{{name}}</h3>
-          <p>{{description}}</p>
-          <label>{{servings}}</label>
-          <br>
-          <label>{{cookTime}}</label>
-          <br>
-          <label>{{difficulty}}</label>
-        </a>
-      </div>
-      <hr />
-    {{/each}}
-
 
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="/js/dishcount.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114632773-2"></script>

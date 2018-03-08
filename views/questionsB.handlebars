@@ -12,17 +12,25 @@
 
 <html>
 <body>
-<button onclick="goBack()" class="backbtn"> Back </button>
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+	</div>
+	<div class="container" style="width: 90%">
+		<h1 class="header" style="text-align: center; margin-top: 50px"> PREFERENCES </h1>
 
-<h1 style="text-align: center"> Questionaire </h1>
+		<p class="texts" style=""> 
+			Our app will also recommend you recipes based on the meals you
+			create!
+		</p>
+		<p class="texts" style=""> 
+			Recipe recommendations will be fine-tuned to your preferences.
+		</p>
+		<hr>
 
-<h3 style="margin-left: 20px; margin-right: 20px"> Please answer these questions so we can tailor these recipes to your tastes! Feel free to skip any you do not wish to answer.</h3>
-
-<div class="container-fluid">
-	<div class="container">
-		<h3> Question 1) </h3>
-		<p> What is your favorite type of food?</p>
-		<input list="likefoodtypes" placeholder="Ex.Asian">
+		<p class="texts" style="text-align: left; margin-left: 5px"> 
+			What is your favorite type of food?
+		</p>
+		<input class="textbox" list="likefoodtypes" placeholder="    ex. Asian">
 			<datalist id="likefoodtypes">
 				<option value="Chinese">
 				<option value="American">
@@ -40,22 +48,20 @@
 				<option value="Vegetable dishes">
 				<option value="Rice dishes">
 				<option value="Egg dishes">
-				<option value="None"
+				<option value="None">
 			</datalist>
 		</input>
-	</div>
 
-	<div class="container">
-		<h3> Question 2) </h3>
-		<p> What type of food do you dislike the most?</p>
-		<input  list="likefoodtypes" placeholder="Ex.Asian">	
+		<p class="texts" style="text-align: left; margin-left: 5px"> 
+			What type of food do you dislike the most?
+		</p>
+		<input class="textbox" list="likefoodtypes" placeholder="     ex. Asian">	
 		</input>
-	</div>
 
-	<div class="container">
-		<h3> Question 3) </h3>
-		<p> Any dietary restrictions?</p>
-		<input  list="dietaryrestriction" placeholder="ex.Vegan">
+		<p class="texts" style="text-align: left; margin-left: 5px"> 
+			Any dietary restrictions?
+		</p>
+		<input class="textbox" list="dietaryrestriction" placeholder="    ex. Vegan">
 			<datalist id="dietaryrestriction">
 				<option value="Ovo-Vegetarian">
 				<option value="Lacto-Vegetarian">
@@ -67,13 +73,12 @@
 				<option value="Islam">
 				<option value="Gluten intolerance">
 			</datalist>
+		</input>
 
-	</div>
-
-	<div class="container">
-		<h3> Question 4) </h3>
-		<p> Anything you're allergic to?</p>
-		<input list="allergies" placeholder="ex.Peanuts">
+		<p class="texts" style="text-align: left; margin-left: 5px">  
+			Anything you're allergic to?
+		</p>
+		<input class="textbox" list="allergies" placeholder="    ex. Peanuts">
 			<datalist id="allergies">
 				<option value="Peanuts">
 				<option value="Milk">
@@ -84,28 +89,38 @@
 				<option value="Shellfish">
 				<option value="Nuts">
 			</datalist>
-	</div>
+		</input>
 
-	<div class="container">
-		<h3> Question 5) </h3>
-		<p> What do you believe is your own cooking skill?</p>
-		<input list="skill" placeholder="Beginner">
-			<datalist id="skill">
-				<option value="Beginner">
-				<option value="Intermediate">
-				<option value="Advanced">
-			</datalist>
-	</div>
-</div>
+		<p class="texts" style="text-align: left; margin-left: 5px">  
+			What do you believe is your own cooking skill?
+		</p>
 
-<div>
-	<h4 style="margin-top: 40px"> Create new login (or enter old login) </h4>
-	<input type="text" placeholder="username" required>
-	<input type="text" placeholder="password" required>
-	<a href="recipeSearchB">
-		<button style="margin-top: 25px" class="btn btn-block"> Go! </button>
-	</a>
-</div>
+		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+			NOVICE 
+		</button>
+		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+			AVERAGE
+		</button>
+		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+			PRO
+		</button>
+
+		<!--
+		<h4 style="margin-top: 40px"> Create new login </h4>
+		<input type="text" placeholder="username" required>
+		<input type="text" placeholder="password" required>
+		-->
+
+		<p class="texts" style="margin-top: 50px"> 
+			These preferences can always be changed by going to the "Options" tab!
+		</p>
+
+		<a href="recipeSearchB">
+			<button class="buttons" style="margin-top: 0px"> 
+				FINISH 
+			</button>
+		</a>
+	</div>
 
 <script src="/js/dishcount.js"></script>
 
