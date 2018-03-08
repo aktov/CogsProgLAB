@@ -6,7 +6,8 @@
 			"description": "Flavorful turkey burgers seasoned with fresh herbs",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/turkey-Burgers_b6s7ao-394x197.jpg",
 			"servings": "4 Servings",
-			"cookTime": "Total Time: 35 minutes"			
+			"cookTime": "Total Time: 35 minutes",
+			"difficulty": "Easy"			
 		},
 		{
 			"name": "Roasted Pumpkin, Sweet Potato, and Brown Rice Pilaf",
@@ -14,7 +15,8 @@
 			"description": "A side dish hearty enough to be your entree",
 			"imageURL": "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Pumpkin-Pilaf-700x350_d5hitz-394x197.jpg",
 			"servings": "8 Servings",
-			"cookTime": "Total Time: 1 hour and 45 minutes"				
+			"cookTime": "Total Time: 1 hour and 45 minutes"	,
+			"difficulty": "Hard"			
 		}
 	]
 }

@@ -13,28 +13,26 @@
 	
 </head>
 <body>
-	<div id="navbar" class="scrollmenu">
-		<a href='../profile'>Profile</a>
-		<a href='../stats'>Stats</a>
-		<a href='../achievements'> Achievements </a>
-		<a href='../recipeSearch'>Recipes</a>
-		<a href='../favorites'>Favorites</a>
-		<a href='../recent'>Recent</a>
-		<a href='../options'>Options</a>
-		<!--a href=#> Achievements </a-->
-	</div>
 
-		<button onclick="goBack()" class="backbtn"> Back </button>
+		<button onclick="goBack()" class="backbutton"> Back </button>
 	<div>
 
 	<h2>Garlic Basil Shrimp with Zucchini Noodles</h2>
 
 	<div class="container">
-		<img class="thumbnail" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Garlic-Basil-Shrimp-with-Zucchini-Noodles-394x197.jpg" />
+		<img class="thumbnail" style="width:100%" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Garlic-Basil-Shrimp-with-Zucchini-Noodles-394x197.jpg" />
 	</div>
 
-	<button style="margin-bottom: 25px">Favorite</button>
+	<button class="backbutton" style="margin-bottom: 25px">Favorite</button>
 	<br>
+
+	<div >
+	<h4> <u>Completed </u></h4>
+	<label class="switch" style="margin-bottom: 20px">
+	  <input type="checkbox" onclick="dishcount(this)" id="completedbox">
+	  <span class="slider round"></span>
+	</label>
+	</div>
 
 
 
@@ -66,6 +64,7 @@
 	<h3>Preparation</h3>
 	<br />
 
+<div class="recipelist">
 	<ol>
 		<li>Boil water in steamer (or large saucepan) over high heat. Reduce heat to medium-high. Place zucchini in steamer basket; cook for 2 to 3 minutes, or until tender. Remove from heat. Set aside.</li>
 		<li>Heat oil in large nonstick skillet over medium-high heat.</li>
@@ -76,10 +75,8 @@
 		<li>Divide zucchini between four serving plates; top evenly with shrimp mixture.</li>
 		<li>Garnish each serving with 1 Tbsp. almonds.</li>
 	</ol>
+</div>
 
-	<div id="checkbox-container">
-	<label><input type="checkbox" onclick="dishcount(this)" id="completedbox"></input> Completed </label>
-	</div>
 </div>
 
 <script src="/js/dishcount.js"></script>

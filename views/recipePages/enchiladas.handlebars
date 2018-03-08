@@ -14,27 +14,27 @@
 </head>
 <body>
 
-	<div id="navbar" class="scrollmenu">
-		<a href='../profile'>Profile</a>
-		<a href='../stats'>Stats</a>
-		<a href='../achievements'> Achievements </a>
-		<a href='../favorites'>Favorites</a>
-		<a href='../recent'>Recent</a>
-		<a href='../options'>Options</a>
-		<!--a href=#> Achievements </a-->
-	</div>
 
-		<button onclick="goBack()" class="backbtn"> Back </button>
+
+		<button onclick="goBack()" class="backbutton"> Back </button>
 	<div>
 
 	<h2>Slow Cooker Cheesy Chicken Enchiladas</h2>
 
 	<div class="container">
-		<img class="thumbnail" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-715x358.jpg" />
+		<img class="thumbnail" style="width:100%" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Slow-Cooker-Cheesy-Chicken-Enchiladas-715x358.jpg" />
 	</div>
 
-	<button style="margin-bottom: 25px">Favorite</button>
+	<button class="backbutton" style="margin-bottom: 25px">Favorite</button>
 	<br>
+
+		<div >
+	<h4> <u>Completed </u></h4>
+	<label class="switch" style="margin-bottom: 20px">
+	  <input type="checkbox" onclick="dishcount(this)" id="completedbox">
+	  <span class="slider round"></span>
+	</label>
+	</div>
 
 
 	<label>Total time: 3 hours 28 mins</label>
@@ -72,6 +72,7 @@
 	<h3>Preparation</h3>
 	<br />
 
+<div class="recipelist">
 	<ol>
 		<li>Heat oil in medium nonstick skillet over medium-high heat.</li>
 		<li>Add onion; cook, stirring frequently, for 3 to 5 minutes, or until onion is soft.</li>
@@ -81,10 +82,9 @@
 		<li>Remove lid and stir mixture. Season with salt and pepper if desired. Add cheese; mix well. Cover until cheese has melted.</li>
 		<li>Top with green onions and cilantro; serve.</li>
 	</ol>
+</div>
 
-	<div id="checkbox-container">
-	<label><input type="checkbox" onclick="dishcount(this)" id="completedbox"></input> Completed </label>
-	</div>
+
 </div>
 
 
