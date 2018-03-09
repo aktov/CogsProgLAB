@@ -24,7 +24,7 @@
 		<!--a href=#> Achievements </a-->
 	</div>
 
-	<br />
+	<br>
 	<h1 align="center" class="header"> PROFILE </h1>
 
 	<p class="facebookLogin" align="center">
@@ -32,24 +32,28 @@
 		</fb:login-button>
 	</p>
 	
-	<div align="center">
+	<div class="container" style="width: 90%" align="center">
 		<div  id="facebookPhoto" class="profile">
 			<img id="photo" src="images/Fire.png" alt="ProfilePic">
 		</div>
-		<h2 id="name"> Name </h2>
+		<h2 class="texts" style="font-size: 40px; text-align: center; margin-bottom: 20px" id="name"> Name </h2>
 
 		<div>
-			<h4 align="left" style="margin-left:40px"> EXP Bar: </h4>
+			<h4 class="texts" align="left"> 		
+				EXPERIENCE 
+			</h4>
 			<meter id="expbar" value = "2" min="0" max="10"> 4 out of 10 </meter>
 		</div>
 
-		<p align="left" style="margin-left:40px"> Keep on cooking! </p>
+		<p class="texts" align="left"> Keep on cooking! </p>
+		<hr>
 
-		<p> Total dishes cooked: <p id="output"></p></p>
-		<p> Dishes to next level up: <p id="toNextLevel"></p></p>
-		<p> Current Level : Beginner </p>
+		<p class="texts"> Total dishes cooked: <p id="output"></p></p>
+		<p class="texts"> Dishes to next level up: <p id="toNextLevel"></p></p>
+		<p class="texts" style="margin-bottom: 100px"> Current Level : Beginner </p>
 
 
+	</div>
 	</div>
 	
 	<script src="https://code.jquery.com/jquery.js"></script>

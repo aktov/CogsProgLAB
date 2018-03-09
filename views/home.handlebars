@@ -12,47 +12,54 @@
 </head>
 
 <body>
-	<div class="container" style="width: 80%;">
-		<img  id="logo" src="/images/Fire logo.png" alt="logo" style="margin-top: 100px">
+	<div id="navbar" class="scrollmenu">
+		<a href='profileB'>Profile</a>
+		<a class="active" href='recipeSearchB'>Recipes</a>
+		<a href='optionsB'>Options</a>
+	</div>
 
-		<a href=""> <button style="margin-top: 20px" class="newAccount buttons" type="submit">
+	<div class="submenu">
+		<a href='favoritesB'>Favorites</a>
+		<a href='recentB'>Recent</a>
+	</div>
+
+	<div class="container" style="width: 80%;">
+		<img src="/images/Prepd.png" id=title width="100%" height="auto" align="center" style="margin: 50px 0px 15px 0px">
+		<!-- old image
+		<img  id="logo" src="/images/Fire logo.png" alt="logo" style="margin-top: 100px">
+		-->
+
+		<a href="recipeSearchB"> <button style="margin-top: 20px" class="newAccount buttons" type="submit">
 			CREATE MEAL PLAN  
 		</button></a>
 		<br>
 		<h5 class="texts"> PLANNED MEALS</h5>
 		<div class="listDiv"> 
 			<label class="listHeader"> Turkey Burgers </label>
-			<label class="listLabel" style="float: left;"> MEALS LEFT: </label>
-			<label class="listLabel" style="font-size: 50px; text-align: center; float: right;">3</label>
+			<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
+			<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;">2</label>
 		</div>
 
-		<div class="listDiv"> 
-			<label class="listHeader"> Turkey Burgers </label>
-			<label class="listLabel">  </label>
-		</div>
+		{{#each recipes}}
+			<div class="listDiv"> 
+				<label class="listHeader"> {{name}} </label>
+				<label class="listLabel">  </label>
+			</div>
+	      <div class="recipeList" id="{{name}}" >
+	        <a class="thumbnail" href="{{recipeURL}}">
+	          <img class="img-responzive" src="{{imageURL}}" />
+	          <h3>{{name}}</h3>
+	          <p>{{description}}</p>
+	          <label>{{servings}}</label>
+	          <br>
+	          <label>{{cookTime}}</label>
+	          <br>
+	          <label>{{difficulty}}</label>
+	        </a>
+	      </div>
+	      <hr />
+	    {{/each}}
 
-		<div class="listDiv"> 
-			<label class="listHeader"> Turkey Burgers </label>
-			<label class="listLabel">  </label>
-		</div>
-
-		<div class="listDiv"> 
-			<label class="listHeader"> Turkey Burgers </label>
-			<label class="listLabel">  </label>
-		</div>
-	</div>
-
-
-<div id="navbar" class="scrollmenu">
-		<a href='profile'>Profile</a>
-		<a  href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
-		<a class="active" href="home"> Home </a>
-		<a href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-		<a href='options'>Options</a>
-		<!--a href=#> Achievements </a-->
 	</div>
 
 	<!-- to hide the button -->

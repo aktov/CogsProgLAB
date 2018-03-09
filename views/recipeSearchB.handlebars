@@ -25,9 +25,6 @@
 		<a href='recentB'>Recent</a>
 	</div>
 
-	<div class="topnav">
-		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
-	</div>
 	<!--
 	<div id="navbar" class="scrollmenu">
 		<a href='stats'>Stats</a>
@@ -46,16 +43,28 @@
 	-->
 
 	<div class="topnav">
-		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
+		<a href="home"> <button style="float: left; width: 70px" class="backbutton"> CANCEL </button> </a>
 	</div>
 
 	<h1 align="center" class="header" style="margin-top: 50px"> 
-		SEARCH FOR RECIPES 
+		NEW MEAL PLAN
 	</h1>
 
-	 <div class="container">
+	
+	 <div class="container" style="width: 90%;">
+	 	<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Select amount of meals to cook
+	 	</h4>
+	 	<input type="range" min="1" max="10" value="1" class="slider" id="meals"></input>
+	 	<p class="texts" style="display: inline-block; vertical-align: top; float: left; width: 0px"> AMOUNT: </p>
+	 	<p class="texts" style="display: inline-block; text-align: center; font-size: 30px; margin-bottom: 25px;"> <span id="amt"></span></p>
+
 		<br>
-		<input class="textbox" placeholder="    Enter recipe here"></input>
+
+		<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Search for a recipe to cook
+	 	</h4>
+		<input class="textbox" placeholder="    ex: Grilled Chicken"></input>
 		<br>
 
 	<!--
@@ -69,12 +78,15 @@
 		<a href='recipeList'><button type="submit" class="buttons">
 			SEARCH
 		</button></a>
-			 	<br>
+		<br>
 
 	 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 			OR 
 	 	</h4>
 	
-		<a href='recipeList'><button class="buttons"> 
+		<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Select from list of recommended recipes
+	 	</h4>
+		<a href='recipeList'><button class="buttons" style="margin-bottom: 100px"> 
 			SHOW ALL RECIPES
 		</button></a>
 	</div> 
@@ -97,6 +109,16 @@
     {{/each}}
 	-->
 
+<!-- for the slider -->
+<script>
+	var slider = document.getElementById("meals");
+	var output = document.getElementById("amt");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+</script>
 
 
 <script src="js/jquery-1.11.0.js"></script>
