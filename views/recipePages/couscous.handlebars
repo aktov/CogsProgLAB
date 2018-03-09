@@ -14,28 +14,27 @@
 </head>
 <body>
 
-	<div id="navbar" class="scrollmenu">
-		<a href='../profile'>Profile</a>
-		<a href='../stats'>Stats</a>
-		<a href='../achievements'> Achievements </a>
-		<a href='../recipeSearch'>Recipes</a>
-		<a href='../favorites'>Favorites</a>
-		<a href='../recent'>Recent</a>
-		<a href='../options'>Options</a>
-		<!--a href=#> Achievements </a-->
-	</div>
 
-	<button onclick="goBack()" class="backbtn"> Back </button>
+
+	<button onclick="goBack()" class="backbutton"> Back </button>
 
 	<div>
 	<h2>Curried Chicken with Couscous</h2>
 
 	<div class="container">
-		<img class="thumbnail" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2015/03/Curried-Chicken-with-Couscous1-715x358.jpg" />
+		<img class="thumbnail" style="width:100%" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2015/03/Curried-Chicken-with-Couscous1-715x358.jpg" />
 	</div>
 
-	<button style="margin-bottom: 25px">Favorite</button>
+	<button class="backbutton" style="margin-bottom: 25px">Favorite</button>
 	<br>
+
+		<div >
+	<h4> <u>Completed </u></h4>
+	<label class="switch" style="margin-bottom: 20px">
+	  <input type="checkbox" onclick="dishcount(this)" id="couscheck">
+	  <span class="slider round"></span>
+	</label>
+	</div>
 
 
 	<label>Total time: 42 mins</label>
@@ -67,6 +66,7 @@
 	<h3>Preparation</h3>
 	<br />
 
+<div class="recipelist">
 	<ol>
 		<li>Heat water, ½ cup coconut milk, and ¼ tsp. salt in medium saucepan over medium high heat. Bring to a boil. Gradually stir in couscous. Remove from heat. Let stand, covered, for 5 minutes. Remove cover and fluff with a fork. </li>
 		<li>Combine remaining ¾ tsp. salt, flour, and curry powder in a resealable plastic bag. Add chicken, seal the bag, and toss gently to coat.</li>
@@ -75,10 +75,8 @@
 		<li>Add remaining 2 cups coconut milk, carrots, and raisins. Bring to a boil. Reduce heat to low; gently boil, stirring occasionally, for 7 to 10 minutes, or until chicken is tender.</li>
 		<li>Place ½ cup of couscous in each of eight serving bowls. Top with ¾ cup curried chicken. Garnish each serving with 1 Tbsp. cilantro. </li>
 	</ol>
+</div>
 
-	<div id="checkbox-container">
-	<label><input type="checkbox" onclick="dishcount(this)" id="completedbox"></input> Completed </label>
-	</div>
 </div>
 
 

@@ -1,11 +1,10 @@
-html{
-  height:100%;
-}
+
 
 html body{
   background-image:url(/images/BG.png);
-  background-position: center bottom;
+  background-position: center;
   background-attachment: scroll;
+  background-repeat: repeat-y;
 
 }
 
@@ -22,6 +21,10 @@ img{
 
 div {
 	text-align: center;
+}
+
+.recipelist{
+  text-align:left;
 }
 
 
@@ -200,6 +203,7 @@ meter{
 }
 
 div.scrollmenu {
+    
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
@@ -501,3 +505,4 @@ li a {
   width:75%;
   height:auto;
 }
+
