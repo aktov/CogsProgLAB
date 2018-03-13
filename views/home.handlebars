@@ -14,7 +14,7 @@
 
 <body onload="mealhide();setcount();">
 
-	<div id="navbar" class="scrollmenu">
+	<div id="navbar" class="scrollmenu" style='z-index: 3'>
 		<a href='profileB'>Profile</a>
 		<a class="active" href='recipeSearchB'>Recipes</a>
 		<a href='optionsB'>Options</a>
@@ -41,62 +41,68 @@
 
 	<div class="listDiv cooked" id='turkey'>
 		<label class="listHeader"> Turkey Burgers </label>
+		<button onclick="xbutton(this)" id="turkeyx" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=turkeycountout></label>
 		<br>
 		<button class="atemealbtn" id='turkeybtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id='turkeybtnnvm' onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id='turkeybtnnvm' onclick="nvm(this)">Add one meal </button>
 	</div>
 
 	<div class="listDiv cooked" id='shrimp'>
-		<label class="listHeader">Shrimp with Zucchini Noodles</label>
+		<label class="listHeader">Shrimp with Zucchini<br> Noodles</label>
+		<button onclick="xbutton(this)" id="shrimpx" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=shrimpcountout></label>
 		<br>
 		<button class="atemealbtn" id='shrimpbtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id="shrimpbtnnvm" onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id="shrimpbtnnvm" onclick="nvm(this)">Add one meal </button>
 	</div>
 
 	<div class="listDiv cooked" id='butter'>
-		<label class="listHeader">Chicken and Butternut Soup</label>
+		<label class="listHeader">Chicken and Butternut <br> Soup</label>
+		<button onclick="xbutton(this)" id="butterx" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=buttercountout></label>
 		<br>
 		<button class="atemealbtn" id='butterbtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id='butterbtnnvm' onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id='butterbtnnvm' onclick="nvm(this)">Add one meal </button>
 	</div>
 
 	<div class="listDiv cooked" id='cous'>
-		<label class="listHeader">Curried Chicken with Couscous</label>
+		<label class="listHeader">Curried Chicken with <br> Couscous</label>
+		<button onclick="xbutton(this)" id="cousx" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=couscountout></label>
 		<br>
 		<button class="atemealbtn" id='cousbtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id='cousbtnnvm' onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id='cousbtnnvm' onclick="nvm(this)">Add one meal </button>
 	</div>
 
 	<div class="listDiv cooked" id='enchi'>
 		<label class="listHeader">Slow Cooker Enchiladas</label>
+		<button onclick="xbutton(this)" id="enchix" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=enchicountout></label>
 		<br>
 		<button class="atemealbtn" id='enchibtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id='enchibtnnvm' onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id='enchibtnnvm' onclick="nvm(this)">Add one meal</button>
 	</div>
 
 	<div class="listDiv cooked" id='roasted'>
-		<label class="listHeader">Roasted Chicken</label>
+		<label class="listHeader">Roasted Pumpkin Pilaf</label>
+		<button onclick="xbutton(this)" id="roastedx" class="x_button"> x </button>
 		<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 		<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;" id=roastedcountout></label>
 		<br>
 		<button class="atemealbtn" id='roastedbtn' onclick="atemeal(this)"> Ate a meal! </button>
-
-		<button class="nvmbtn" id='roastedbtnnvm' onclick="nvm(this)">Nevermind </button>
+		<br>
+		<button class="nvmbtn" id='roastedbtnnvm' onclick="nvm(this)">Add one meal</button>
 	</div>
 
 
@@ -104,7 +110,7 @@
 </div>
 		<br>
 		<h5 class="texts"> PLANNED MEALS</h5>
-		<div class="listDiv"> 
+		<div class="listDiv" style="margin-bottom: 100px"> 
 			<label class="listHeader"> Turkey Burgers </label>
 			<label class="listLabel" style="display: inline-block; float: left; width: 100px;"> MEALS LEFT: </label>
 			<label class="listLabel" style="display: inline-block; font-size: 50px; width: 50px; text-align: center; float: left;">2</label>
@@ -115,7 +121,7 @@
 	</div>
 
 <script>
-	var shrimp = document.getElementById("shrimpbtn");
+	 var shrimp = document.getElementById("shrimpbtn");
 	var shrimp_nvm = document.getElementById("shrimpbtnnvm")
 	var s_content = document.getElementById("shrimpcountout")
 	shrimp.addEventListener("click",function(){
@@ -123,6 +129,56 @@
 	});
 	shrimp_nvm.addEventListener("click",function(){
 		s_content.innerHTML = localStorage.getItem('shrimpcount');
+	});
+
+	var turkey = document.getElementById("turkeybtn");
+	var turkey_nvm = document.getElementById("turkeybtnnvm")
+	var t_content = document.getElementById("turkeycountout")
+	turkey.addEventListener("click",function(){
+		t_content.innerHTML = localStorage.getItem('turkeycount');
+	});
+	turkey_nvm.addEventListener("click",function(){
+		t_content.innerHTML = localStorage.getItem('turkeycount');
+	});
+
+	var butter = document.getElementById("butterbtn");
+	var butter_nvm = document.getElementById("butterbtnnvm")
+	var b_content = document.getElementById("buttercountout")
+	butter.addEventListener("click",function(){
+		b_content.innerHTML = localStorage.getItem('buttercount');
+	});
+	butter_nvm.addEventListener("click",function(){
+		b_content.innerHTML = localStorage.getItem('buttercount');
+	});
+
+	var cous = document.getElementById("cousbtn");
+	var cous_nvm = document.getElementById("cousbtnnvm")
+	var c_content = document.getElementById("couscountout")
+	cous.addEventListener("click",function(){
+		c_content.innerHTML = localStorage.getItem('couscount');
+	});
+	cous_nvm.addEventListener("click",function(){
+		c_content.innerHTML = localStorage.getItem('couscount');
+	});
+
+	var enchi = document.getElementById("enchibtn");
+	var enchi_nvm = document.getElementById("enchibtnnvm")
+	var e_content = document.getElementById("enchicountout")
+	enchi.addEventListener("click",function(){
+		e_content.innerHTML = localStorage.getItem('enchicount');
+	});
+	enchi_nvm.addEventListener("click",function(){
+		e_content.innerHTML = localStorage.getItem('enchicount');
+	});
+
+	var roasted = document.getElementById("roastedbtn");
+	var roasted_nvm = document.getElementById("roastedbtnnvm")
+	var r_content = document.getElementById("roastedcountout")
+	roasted.addEventListener("click",function(){
+		r_content.innerHTML = localStorage.getItem('roastedcount');
+	});
+	roasted_nvm.addEventListener("click",function(){
+		r_content.innerHTML = localStorage.getItem('roastedcount');
 	});
 </script>
 
@@ -140,6 +196,7 @@
 
 
 <script src="js/mealplan.js"></script>
+
 
 </body>
 </html>

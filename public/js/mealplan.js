@@ -14,9 +14,7 @@ function mealplan(checkbox){
 	console.log(localStorage.getItem(id));
 }
 
-function loadnumbers(){
 
-}
 
 //on load, go through mealplans and hide them if they're not true, and add numbers to localhost 
 //make sure the id of the mealplan is just the name of the recipe 
@@ -31,7 +29,6 @@ function mealhide(){
 
     	//if there is no value, set to max amount 
     	if(localStorage.getItem(idcount) == null){
-    		console.log('hi');
     			
     			if(id==='turkey'){
     				basevalue=4;
@@ -91,7 +88,6 @@ function atemeal(ele){
 	var id=ele.id.slice(0,-3);
 	var storageid=id+'count';
 	var mealsleft=Number(localStorage.getItem(storageid));
-	console.log(storageid);
 	mealsleft=mealsleft-1;
 	console.log(mealsleft);
 	localStorage.setItem(storageid,mealsleft);
@@ -110,9 +106,11 @@ function nvm(ele){
 
 
 //for the x button 
-function xbutton(){
+function xbutton(ele){
 	var id=ele.id;
-	if (confirm('Do you want to close the application ?')){
-		id.style.display="none";	
+	var mealid=ele.id.slice(0,-1);
+	if (confirm('Do you want to delete this mealplan?')){
+		document.getElementById(mealid).style.display="none";
+		localStorage.setItem(mealid+'check','false');	
 	} 	
 }

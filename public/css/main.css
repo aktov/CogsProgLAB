@@ -231,6 +231,7 @@ div.submenu {
   position: fixed;
   bottom: 47px;
   width: 100%;
+  z-index: 3;
 }
 
 div.submenu a {
@@ -266,8 +267,7 @@ div.submenu a:hover {
 }
 
 
-/*Toggle button */
-
+/*toggle switches*/
 .switch {
   position: relative;
   display: inline-block;
@@ -278,28 +278,19 @@ div.submenu a:hover {
 .switch input {display:none;}
 
 .slider {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
-  -webkit-appearance: none; 
-  height: 7px; 
-  width: 100%;
-  border-radius: 5px;
-  appearance: none;
-  margin-bottom: 20px;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #FF8C00; /* Green background */
-    border-radius: 5px;
-    cursor: pointer; /* Cursor on hover */
 }
 
 .slider:before {
+  position: absolute;
   content: "";
   height: 26px;
   width: 26px;
@@ -311,7 +302,7 @@ div.submenu a:hover {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #FF8C00;
 }
 
 input:focus + .slider {
@@ -332,6 +323,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
 
 
 
@@ -407,9 +400,11 @@ input:checked + .slider:before {
   border-radius: 5px;
   margin-bottom: 20px; 
   width: 100%; 
-  height: 180px; 
+  display:inline-block;
   background-color: white; 
   color: #4d5259;
+  position:relative;
+
 }
 
 .listHeader {
@@ -507,8 +502,11 @@ li a {
 }
 
 .x_button{
-  float:right;
-  position:absolute;
+  position: absolute;
+  top:10px;
+  right:10px;
+  color:white;
+  background-color: #a34c4c;
 
 }
 
@@ -524,10 +522,10 @@ li a {
 }
 
 .nvmbtn{
-      border: none; 
+  border: none; 
   border-radius: 5px;
   margin-bottom: 20px; 
-  width: 30%; 
+  width: 40%; 
   height: 20px; 
   background-color: gray; 
   color: white;
