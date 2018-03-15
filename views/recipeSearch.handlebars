@@ -2,22 +2,6 @@
 
 <html>
 <head>
-
-	<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='171151920-2',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
-
 	<title>LAByrinth</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,33 +14,16 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </head>
 
 <body>
-		
-	{{#if versionA}}
-		<div id="navbar" class="scrollmenu">
-			<a href='profile'>Profile</a>
-			<a href='stats'>Stats</a>
-			<a href='achievements'> Achievements </a>
-			<!--a href="home"> Home </a-->
-			<a class="active" href='recipeSearch'>Recipes</a>
-			<a href='favorites'>Favorites</a>
-			<a href='recent'>Recent</a>
-			<a href='options'>Options</a>
-		</div>
+	<div id="navbar" class="scrollmenu">
+		<a href='profile'>PROFILE</a>
+		<a class="active" href='home'>HOME</a>
+		<a href='options'>OPTIONS</a>
+	</div>
 
-	{{else}}
-		<div class="submenu">
-			<a href='favorites'>Favorites</a>
-			<a href='recent'>Recent</a>
-		</div>
-
-		<div id="navbar" class="scrollmenu">
-			<a href='profileB'>Profile</a>
-			<a class="active" href='recipeSearchB'>Recipes</a>
-			<a href='optionsB'>Options</a>
-		</div>
-
-	{{/if}}
-
+	<div class="submenu">
+		<a href='favorites'>FAVORITES</a>
+		<a href='recent'>RECENT</a>
+	</div>
 
 	<!--
 	<div id="navbar" class="scrollmenu">
@@ -75,14 +42,29 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	</div>
 	-->
 
+	<div class="topnav">
+		<a href="home"> <button style="float: left; width: 70px" class="backbutton"> CANCEL </button> </a>
+	</div>
+
 	<h1 align="center" class="header" style="margin-top: 50px"> 
 		NEW MEAL PLAN
 	</h1>
-	
 
-	 <div class="container">
+	
+	 <div class="container" style="width: 90%;">
+	 	<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Select amount of meals to cook
+	 	</h4>
+	 	<input type="range" min="1" max="10" value="1" class="slider" id="meals"></input>
+	 	<p class="texts" style="display: inline-block; vertical-align: top; float: left; width: 0px"> AMOUNT: </p>
+	 	<p class="texts" style="display: inline-block; text-align: center; font-size: 30px; margin-bottom: 25px;"> <span id="amt"></span></p>
+
 		<br>
-		<input class="textbox" placeholder="    Enter recipe here"></input>
+
+		<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Search for a recipe to cook
+	 	</h4>
+		<input class="textbox" placeholder="    ex: Grilled Chicken"></input>
 		<br>
 
 	<!--
@@ -93,32 +75,36 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		</label>
 	-->
 
-		{{#if versionA}}
-			<a href='recipeList'><button type="submit" class="buttons">
-				SEARCH
-			</button></a>
-				 	<br>
+		<a href='recipeList'><button type="submit" class="buttons">
+			SEARCH
+		</button></a>
+		<br>
 
-		 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 		OR 
-		 	</h4>
-		
-			<a href='recipeList'><button class="buttons"> 
-				SHOW ALL RECIPES
-			</button></a>
+	 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 			OR 
+	 	</h4>
+	
+		<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Select from list of recommended recipes
+	 	</h4>
+		<a href='recipeList'><button class="buttons"> 
+			SHOW ALL RECIPES
+		</button></a>
 
-		{{else}}
-			<a href='recipeListB'><button type="submit" class="buttons">
-				SEARCH
-			</button></a>
-				 	<br>
+		<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 			OR 
+	 	</h4>
+	
+		<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Create your own recipe!
+	 	</h4>
 
-		 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 		OR 
-		 	</h4>
+	 	<form role="form" method="get" action="/create">
+			<input type="text" class="textbox" name="customRecipe" placeholder="    ex: Grilled Chicken"></input>
+			<input type="submit" href='home' style="margin-bottom: 100px" class="buttons" value="CREATE">
+			</input>
+		</form>
+		<br>
 
-			<a href='recipeListB'><button class="buttons"> 
-				SHOW ALL RECIPES
-			</button></a>
-		{{/if}}
+
 	</div> 
 	<br>
 
@@ -139,13 +125,22 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     {{/each}}
 	-->
 
-	
+<!-- for the slider -->
+<script>
+	var slider = document.getElementById("meals");
+	var output = document.getElementById("amt");
+	output.innerHTML = slider.value;
 
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+</script>
 
 
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="/js/dishcount.js"></script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114632773-2"></script>
@@ -156,7 +151,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   gtag('config', 'UA-114632773-2');
 </script>
-
 	
 </body>
 </html>

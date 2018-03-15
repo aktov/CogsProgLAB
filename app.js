@@ -23,6 +23,9 @@ var recent = require('./routes/recent');
 var profile = require('./routes/profile');
 var achievements = require('./routes/achievements');
 
+// planned meal
+var create = require('./routes/create');
+
 //routes for recipe pages
 var turkeyBurger = require('./routes/turkeyBurger');
 var roasted = require('./routes/roasted');
@@ -77,6 +80,7 @@ if ('development' == app.get('env')) {
 // Example route
 // app.get('/users', user.list);
 app.get('/', index.view);
+app.get('/create', create.createMeal);
 
 app.get('/recipeSearch', recipeSearch.viewABTest);
 //app.get('/recipeSearch', recipeSearch.viewATest);
@@ -92,7 +96,6 @@ app.get('/favorites', favorites.view);
 app.get('/recent', recent.view);
 app.get('/profile', profile.view);
 app.get('/achievements', achievements.view);
-
 
 //routes for recipe pages
 app.get('/recipePages/turkeyBurger', turkeyBurger.view);
@@ -113,7 +116,6 @@ app.get('/favoritesB', favoritesB.view);
 app.get('/recentB', recentB.view);
 app.get('/profileB', profileB.view);
 app.get('/achievementsB', achievementsB.view);
-
 
 //routes for recipe pages
 app.get('/viewsB/recipePages/turkeyBurger', turkeyBurgerB.view);

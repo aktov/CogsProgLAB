@@ -15,15 +15,18 @@
 
 <body>
 	<div id="navbar" class="scrollmenu">
-		<a href='profile'>Profile</a>
-		<a href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
-		<!--a href="home"> Home </a-->
-		<a class="active" href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a href='recent'>Recent</a>
-		<a href='options'>Options</a>
-		
+		<a href='profile'>PROFILE</a>
+		<a class="active" href='home'>HOME</a>
+		<a href='options'>OPTIONS</a>
+	</div>
+
+	<div class="submenu">
+		<a href='favorites'>FAVORITES</a>
+		<a href='recent'>RECENT</a>
+	</div>
+
+	<div class="topnav">
+		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
 	</div>
 
 	<!--
@@ -42,24 +45,22 @@
 		<a href=#>Achievements</a>
 	</div>
 	-->
-	<div class="topnav">
-		<button onclick="goBack()" style="float: left;" class="backbutton"> BACK </button>
-	</div>	
 
+	<h1 align="center" class="header" style="margin-top: 50px"> RECIPES </h1>
+	
 	<div class="container" style="width: 90%">
-		<h1 align="center" class="header" style="margin-top: 50px"> RECIPES </h1>
-
+	
 		{{#each recipes}}
-	      <div class="recipeList" id="{{name}}" >
-	        <a class="thumbnail" href="{{recipeURL}}">
-	          <img class="img-responzive" src="{{imageURL}}" />
+	      <div class="recipes" id="{{name}}" >
+	        <a class="thumbnail" style="border-radius: 10px" href="{{recipeURL}}">
+	          <img class="img-responzive" style="border-radius: 10px" src="{{imageURL}}" />
 	          <h3>{{name}}</h3>
 	          <p>{{description}}</p>
 	          <label>{{servings}}</label>
 	          <br>
 	          <label>{{cookTime}}</label>
-	          <br>
-	          <label>{{difficulty}}</label>
+	           <br>
+         	 <label>{{difficulty}}</label>
 	        </a>
 	      </div>
 	      <hr />
@@ -67,12 +68,12 @@
 
 	</div>
 
-
 <script src="js/jquery-1.11.0.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="/js/dishcount.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114632773-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -82,6 +83,5 @@
   gtag('config', 'UA-114632773-2');
 </script>
 
-	
 </body>
 </html>

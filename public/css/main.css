@@ -278,19 +278,28 @@ div.submenu a:hover {
 .switch input {display:none;}
 
 .slider {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  -webkit-appearance: none; 
+  height: 7px; 
+  width: 100%;
+  border-radius: 5px;
+  appearance: none;
+  margin-bottom: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #FF8C00; /* Green background */
+    border-radius: 5px;
+    cursor: pointer; /* Cursor on hover */
 }
 
 .slider:before {
-  position: absolute;
   content: "";
   height: 26px;
   width: 26px;
@@ -493,8 +502,6 @@ li a {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-
 
 #mainsearch{
   width:75%;

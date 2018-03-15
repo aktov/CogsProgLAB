@@ -12,16 +12,15 @@
 	
 </head>
 <body>
-	<div id="navbar" class="scrollmenu">
-		<a href='profile'>Profile</a>
-		<a href='stats'>Stats</a>
-		<a href='achievements'> Achievements </a>
-		<!--a href="home"> Home </a-->
-		<a href='recipeSearch'>Recipes</a>
-		<a href='favorites'>Favorites</a>
-		<a class="active" href='recent'>Recent</a>
-		<a href='options'>Options</a>
-		<!--a href=#> Achievements </a-->
+	<div id="navbar" class="scrollmenu" style='z-index: 3'>
+		<a href='profile'>PROFILE</a>
+		<a href='home'>HOME</a>
+		<a href='options'>OPTIONS</a>
+	</div>
+
+	<div class="submenu">
+		<a href='favorites'>FAVORITES</a>
+		<a class="active" href='recent'>RECENT</a>
 	</div>
 
 	<h1 align="center" class="header"> RECENTLY VIEWED </h1>
@@ -35,8 +34,6 @@
           <label>{{servings}}</label>
           <br>
           <label>{{cookTime}}</label>
-          <br>
-          <label>{{difficulty}}</label>
         </a>
       </div>
       <hr />
