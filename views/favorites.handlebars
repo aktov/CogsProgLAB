@@ -25,22 +25,24 @@
 
 	<h1 align="center" class="header"> FAVORITES </h1>
 
-	{{#each favoriterecipes}}
-      <div class="favoriterecipes">
-        <a class="thumbnail" href="{{recipeURL}}">
-          <img class="img-responzive" src="{{imageURL}}" />
-          <h3>{{name}}</h3>
-          <p>{{description}}</p>
-          <label>{{servings}}</label>
-          <br>
-          <label>{{cookTime}}</label>
-          <br>
-          <label>{{difficulty}}</label>
-        </a>
-      </div>
-      <hr />
-    {{/each}}
+	<div class="container" style="width: 90%">
+		{{#each favoriterecipes}}
+	      <div class="favoriterecipes">
+	        <a class="thumbnail" style="border-radius: 5px" href="{{recipeURL}}">
+	          <img class="img-responzive" style="border-radius: 10px" src="{{imageURL}}" />
+	          <h3>{{name}}</h3>
+	          <p>{{description}}</p>
+	          <label>{{servings}}</label>
+	          <br>
+	          <label>{{cookTime}}</label>
+	          <br>
+	          <label>{{difficulty}}</label>
+	        </a>
+	      </div>
+	    {{/each}}
+	</div>
 
+	<p style="margin-bottom: 100px;"></p>
 
 
 <script src="js/jquery-1.11.0.js"></script>

@@ -114,3 +114,14 @@ function xbutton(ele){
 		localStorage.setItem(mealid+'check','false');	
 	} 	
 }
+
+
+//for the x button 
+function xbutton2(ele){
+	var id=ele.id;
+	var mealid=ele.id.slice(0,-1);
+	if (confirm('Do you want to delete this mealplan?')){
+		ele.parentNode.style.display="none";
+		localStorage.setItem(mealid+'check','false');	
+	} 	
+}

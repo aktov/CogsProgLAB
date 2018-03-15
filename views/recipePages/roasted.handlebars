@@ -17,21 +17,20 @@
 		<button onclick="goBack()" class="backbutton"> Back </button>
 	<div>
 
-	<h2>Roasted Pumpkin, Sweet Potato, and Brown Rice Pilaf</h2>
+	<h2><strong>Roasted Pumpkin, Sweet Potato, and Brown Rice Pilaf</strong></h2>
 
 	<div class="container">
 		<img class="thumbnail" style="width:100%" src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Pumpkin-Pilaf-700x350_d5hitz-394x197.jpg" />
 	</div>
 
-	<button  class="backbutton" style="margin-bottom: 25px">Favorite</button>
-	<br>
-
-		<div >
-	<h4> <u>Completed </u></h4>
-	<label class="switch" style="margin-bottom: 20px">
-	  <input type="checkbox" onclick="dishcount(this);mealplan(this);" id="roastedcheck">
-	  <span class="slider round"></span>
-	</label>
+	<div class="container">
+		<button class="buttons" style="margin-bottom: 25px">FAVORITE</button>
+		<br>
+		<h4>Completed</h4>
+		<label class="switch" style="margin-bottom: 20px">
+		  <input type="checkbox" id="roastedcheck" onclick="dishcount(this);mealplan(this);" >
+		  <span class="slider round"></span>
+		</label>
 	</div>
 
 
@@ -83,6 +82,7 @@
 
 
 <script src="/js/dishcount.js"></script>
+<script src="/js/mealplan.js"></script>
 <script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.js"></script>
 
