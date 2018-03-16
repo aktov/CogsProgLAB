@@ -267,8 +267,7 @@ div.submenu a:hover {
 }
 
 
-
-.slider {
+.sliderC {
   cursor: pointer;
   -webkit-transition: .4s;
   transition: .4s;
@@ -280,7 +279,19 @@ div.submenu a:hover {
   margin-bottom: 20px;
 }
 
-.slider::-webkit-slider-thumb {
+.slider {
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-appearance: none; 
+  height: 35px; 
+  width: 100%;
+  border-radius: 5px;
+  appearance: none;
+  margin-bottom: 20px;
+}
+
+.sliderC::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
