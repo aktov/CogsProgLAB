@@ -7,7 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="/css/toggle.css" type="text/css" rel="stylesheet">
 	<link href="/css/main.css" type="text/css" rel="stylesheet">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	
@@ -61,9 +63,17 @@
 	 	</h4>
 		<input class="textbox" style="margin-bottom: 5px;" placeholder="    ex: Grilled Chicken"></input>;
 		<br>
-		<h4 class="texts" style="font-size: 22px; margin-bottom: 5px"> 
+		<h4 class="texts" style="display: inline-block; float: left; font-size: 22px; margin-bottom: 5px"> 
 	 		OPTIONAL FILTERS
 	 	</h4>
+
+		<label class="switchB" style="display: inline-block; float: right; margin-top: 10px; margin-bottom: 0px">
+		  <input type="checkbox" onclick="toggle()"></input>
+		  <span class="sliderB round"></span>
+		</label>
+
+	 <div class="newAccount" style="display: none; width: 85%;">
+	 	<p style="margin-top: 50px;"></p>
 	 	<h4 class="texts" style="margin-bottom: 5px"> 
 	 		Serving Size
 	 	</h4>
@@ -72,15 +82,16 @@
 		<h4 class="texts" style="margin-bottom: 5px; "> 
 	 		Difficulty
 	 	</h4>
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts activeB" onclick="changeColor(1)" style="width: 30%; display: inline-block; margin: 1px"> 
 			NOVICE 
 		</button>
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts" onclick="changeColor(2)" style="width: 30%; display: inline-block; margin: 1px;"> 
 			AVERAGE
 		</button>
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts" onclick="changeColor(3)" style="width: 30%; display: inline-block; margin: 1px"> 
 			PRO
 		</button>
+	</div>
 	<!--
 		<label class="listLabel" style="font-size: 20px; text-align: center";>
 		  	<input style="border: none; width: 20px; height: 20px;margin-bottom: 20px" type="checkbox" > 
@@ -125,13 +136,38 @@
 
 <!-- for the slider -->
 <script>
-	var slider = document.getElementById("meals");
-	var output = document.getElementById("amt");
-	output.innerHTML = slider.value;
+var slideIndex = 3;
 
-	slider.oninput = function() {
-	  output.innerHTML = this.value;
+function changeColor(n) {
+	slideIndex = n;
+	var i;
+	var opts = document.getElementsByClassName("opts");
+
+	if (n > opts.length) {slideIndex = 1} 
+  	if (n < 1) {slideIndex = opts.length}
+	for (i = 0; i < opts.length; i++) {
+		console.log(opts[i].className);
+	    opts[i].className = opts[i].className.replace(" activeB", "");
 	}
+
+	opts[slideIndex-1].className += " activeB";
+}
+</script>
+
+<script>
+function toggle() {
+    var elements = document.querySelectorAll('.newAccount');
+
+    for (var i = 0; i < elements.length; i++) {
+    	if (elements[i].style.display === "none") {
+    		elements[i].style.display = "block";
+    	}
+    	else {
+    		elements[i].style.display = "none";
+    	}
+    }
+    console.log("ssd");
+}
 </script>
 
 

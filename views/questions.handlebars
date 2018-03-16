@@ -95,13 +95,13 @@
 			What do you believe is your own cooking skill?
 		</p>
 
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts activeB" onclick="changeColor(1)" style="width: 30%; display: inline-block; margin: 1px"> 
 			NOVICE 
 		</button>
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts" onclick="changeColor(2)" style="width: 30%; display: inline-block; margin: 1px;"> 
 			AVERAGE
 		</button>
-		<button class="buttons" style="width: 30%; display: inline-block; margin: 1px"> 
+		<button class="buttonsB opts" onclick="changeColor(3)" style="width: 30%; display: inline-block; margin: 1px"> 
 			PRO
 		</button>
 
@@ -123,6 +123,25 @@
 	</div>
 
 <script src="/js/dishcount.js"></script>
+
+<script>
+var slideIndex = 3;
+
+function changeColor(n) {
+	slideIndex = n;
+	var i;
+	var opts = document.getElementsByClassName("opts");
+
+	if (n > opts.length) {slideIndex = 1} 
+  	if (n < 1) {slideIndex = opts.length}
+	for (i = 0; i < opts.length; i++) {
+		console.log(opts[i].className);
+	    opts[i].className = opts[i].className.replace(" activeB", "");
+	}
+
+	opts[slideIndex-1].className += " activeB";
+}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114632773-2"></script>

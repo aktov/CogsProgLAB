@@ -56,17 +56,18 @@
 	 	<h4 class="texts" style="margin-bottom: 5px"> 
 	 		Select amount of meals to cook
 	 	</h4>
-	 	<input type="range" min="1" max="10" value="1" class="sliderC" id="meals"></input>
-	 	<p class="texts" style="display: inline-block; vertical-align: top; float: left; width: 0px"> AMOUNT: </p>
-	 	<p class="texts" style="display: inline-block; text-align: center; font-size: 30px; margin-bottom: 25px;"> <span id="amt"></span></p>
-
-		<br>
-	
-		<h4 class="texts" style="margin-bottom: 5px"> 
-	 		Enter your own recipe!
-	 	</h4>
 
 	 	<form role="form" method="get" action="/create">
+		 	<input type="range" min="1" max="10" value="1" class="sliderC" name="amt" id="meals"></input>
+		 	<p class="texts" style="display: inline-block; vertical-align: top; float: left; width: 0px"> AMOUNT: </p>
+		 	<p class="texts" style="display: inline-block; text-align: center; font-size: 30px; margin-bottom: 25px;"> <span id="amt"></span></p>
+
+			<br>
+		
+			<h4 class="texts" style="margin-bottom: 5px"> 
+		 		Enter your own recipe!
+		 	</h4>
+
 			<input type="text" class="textbox" name="customRecipe" placeholder="    ex: Grilled Chicken"></input>
 			<input type="submit" href='home' style="margin-bottom: 100px" class="buttons" value="CREATE">
 			</input>

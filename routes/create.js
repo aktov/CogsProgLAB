@@ -4,7 +4,7 @@ exports.createMeal = function(req, res) { 
 	// Your code goes here
 	var newMeal = {
 			"name": req.query.customRecipe,
-			//"meals": 
+			"meals": req.param('amt')
 		}
 
 	data.recipes.push(newMeal);
