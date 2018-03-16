@@ -16,12 +16,12 @@
 <body>
 	<div id="navbar" class="scrollmenu">
 		<a href='profile'>PROFILE</a>
-		<a href='home'>HOME</a>
+		<a class="active" href='home'>HOME</a>
 		<a href='options'>OPTIONS</a>
 	</div>
 
 	<div class="submenu">
-		<a class="active" href='recipeSearch'>SEARCH</a>
+		<a href='recipeSearch'>SEARCH</a>
 		<a href='favorites'>FAVORITES</a>
 		<a href='recent'>RECENT</a>
 	</div>
@@ -44,43 +44,33 @@
 	-->
 
 	<div class="topnav">
-		<a href="home"> <button style="float: left; width: 70px" class="backbutton"> BACK </button> </a>
+		<a href="home"> <button style="float: left; width: 70px" class="backbutton"> CANCEL </button> </a>
 	</div>
 
 	<h1 align="center" class="header" style="margin-top: 50px"> 
-		SEARCH
+		NEW MEAL PLAN
 	</h1>
 
 	
 	 <div class="container" style="width: 90%;">
-		<h4 class="texts" style="margin-bottom: 5px"> 
-	 		Search for a recipe to cook
+	 	<h4 class="texts" style="margin-bottom: 5px"> 
+	 		Select amount of meals to cook
 	 	</h4>
-		<input class="textbox" placeholder="    ex: Grilled Chicken"></input>
+	 	<input type="range" min="1" max="10" value="1" class="slider" id="meals"></input>
+	 	<p class="texts" style="display: inline-block; vertical-align: top; float: left; width: 0px"> AMOUNT: </p>
+	 	<p class="texts" style="display: inline-block; text-align: center; font-size: 30px; margin-bottom: 25px;"> <span id="amt"></span></p>
+
 		<br>
-
-	<!--
-		<label class="listLabel" style="font-size: 20px; text-align: center";>
-		  	<input style="border: none; width: 20px; height: 20px;margin-bottom: 20px" type="checkbox" > 
-			</input>
-			Search for this ingredient
-		</label>
-	-->
-
-		<a href='recipeList'><button type="submit" class="buttons">
-			SEARCH
-		</button></a>
-		<br>
-
-	 	<h4 class="texts" style="text-align: center; margin-bottom: 30px"> 			OR 
-	 	</h4>
 	
 		<h4 class="texts" style="margin-bottom: 5px"> 
-	 		Select from list of recommended recipes
+	 		Enter your own recipe!
 	 	</h4>
-		<a href='recipeList'><button class="buttons"> 
-			SHOW ALL RECIPES
-		</button></a>
+
+	 	<form role="form" method="get" action="/create">
+			<input type="text" class="textbox" name="customRecipe" placeholder="    ex: Grilled Chicken"></input>
+			<input type="submit" href='home' style="margin-bottom: 100px" class="buttons" value="CREATE">
+			</input>
+		</form>
 		<br>
 
 

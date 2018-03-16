@@ -12,6 +12,7 @@ var handlebars = require('express3-handlebars')
 // var user = require('./routes/user');
 var index = require('./routes/index');
 var home = require('./routes/home');
+var createPage = require('./routes/createPage');
 var recipeList = require('./routes/recipeList');
 var recipeSearch = require('./routes/recipeSearch');
 var recipeTemplate = require('./routes/recipeTemplate');
@@ -88,6 +89,7 @@ app.get('/recipeSearch', recipeSearch.viewABTest);
 
 app.get('/recipeList', recipeList.view);
 app.get('/home', home.view);
+app.get('/createPage', createPage.view);
 app.get('/recipeTemplate', recipeTemplate.view);
 app.get('/options', options.view);
 app.get('/stats', stats.view);
